@@ -1,0 +1,25 @@
+body{
+    background-color: #1D3557;
+    color: red;
+}
+.logo{
+    color: #F2994A;
+    text-align: center;
+    font-size: 36px;
+}
+.menu{
+    background-color: #457B9D;
+    text-align: left;
+    display: inline-block;
+}
+.menuOptions{
+    text-align: center;
+}
+.loggedas{
+    background-color: #A8DADC;
+    display: inline-block;
+    text-align: left;
+}
+.loggedCentered{
+    text-align: center;
+}
