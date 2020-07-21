@@ -6,11 +6,17 @@ body{
     color: #F2994A;
     text-align: center;
     font-size: 36px;
+    display: inline-block;
+    margin-left: 350px;
 }
 .menu{
     background-color: #457B9D;
     text-align: left;
     display: inline-block;
+    float: left;
+    width: 230px;
+    height: 950px;
+    float: top;
 }
 .menuOptions{
     text-align: center;
@@ -18,8 +24,18 @@ body{
 .loggedas{
     background-color: #A8DADC;
     display: inline-block;
-    text-align: left;
+    text-align: center;
+
 }
 .loggedCentered{
     text-align: center;
+}
+.mentorprofile{
+    background-color: #457B9D;
+    width: 400px;
+    margin-left: 750px;
+    margin-top: 50px;
+}
+.content{
+    text-align: left;
 }
