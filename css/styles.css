@@ -1,0 +1,69 @@
+body{
+    background-color: #1D3557;
+    color: red;
+}
+.logo{
+    color: #F2994A;
+    text-align: center;
+    font-size: 36px;
+    display: inline-block;
+    margin-left: 350px;
+}
+.menu{
+    background-color: #457B9D;
+    display: inline-block;
+    float: left;
+    width: 230px;
+    height: 950px;
+    float: top;
+    text-align: center;
+    border-radius: 10px;
+}
+.loggedas{
+    background-color: #A8DADC;
+    display: inline-block;
+    text-align: center;
+    margin-top: 15px;
+    border-radius: 20px;
+    width: 220px;
+    height: 100px;
+}
+.mentorprofile{
+    background-color: #457B9D;
+    width: 600px;
+    height: 400px;
+    margin-left: 600px;
+    margin-top: 50px;
+    text-align: left;
+    border-radius: 20px;
+}
+.button{
+    background-color: #F1FAEE;
+    border: none;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 50px;
+    width: 200px;
+    height: 70px;
+}
+.buttonlogout{
+    background-color: #CB3232;
+    border: none;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 50px;
+    width: 200px;
+    height: 70px;
+}
