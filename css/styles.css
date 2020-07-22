@@ -43,9 +43,9 @@ body{
 }
 .innermentorsearch{
     background-color: #A8DADC;
-    width: 270px;
+    width: 450px;
     border-radius: 8px;
-    margin-left: 10px;
+    margin-left: 20px;
 }
 .mentorprofile{
     background-color: #457B9D;
@@ -90,6 +90,21 @@ body{
     border-radius: 50px;
     width: 200px;
     height: 70px;
+}
+.button2{
+    background-color: #F1FAEE;
+    border: none;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 50px;
+    width: 200px;
+    height: 30px;
 }
 .buttonlogout{
     background-color: #CB3232;
