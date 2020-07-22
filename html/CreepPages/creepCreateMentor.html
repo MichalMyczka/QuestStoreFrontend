@@ -3,39 +3,51 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Add new Mentor</title>
-    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <title>CreepCreateMentor</title>
+    <link rel="stylesheet" type="text/css" href="../../css/styles.css">
 </head>
 
 <body>
 
 <div class="logo">
-    <h1> <img src="../images/books.png" alt="bookimage" width="60" height="60"> QUEST <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; STORE </h1>
+    <h1> <img src="../../images/books.png" alt="bookimage" width="60" height="60"> QUEST <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; STORE </h1>
 </div>
 
 <div class="menu">
-    <div class="loggedas">
+    <div class="loggedAs">
         <div class="loggedCentered">
             <p>You Are Currently Logged As:</p>
-            <img src="../images/poteznyGej.jpeg" alt="creepimage" width="60" height="60">
+            <img src="../../images/poteznyGej.jpeg" alt="creepimage" width="60" height="60">
             <p style="float: left">Creep</p>
             <p style="clear: both"></p>
         </div>
     </div>
-
     <div class="menuOptions">
-        <br>
-        <button class="button" type="button">See Mentor Profile</button>
         <br><br>
-        <button class="button" type="button">Create A Class</button>
+        <form action="creepStartingPage.html">
+            <input class="button" type="submit" value="See Mentor Profile" />
+        </form>
         <br><br>
-        <button class="button" type="button">Edit Mentor Profile</button>
+        <form action="creepCreateClass.html">
+            <input class="button" type="submit" value="Create A Class" />
+        </form>
         <br><br>
-        <button class="button" type="button">Create Levels Of Experience</button>
+        <form action="creepEditMentor.html">
+            <input class="button" type="submit" value="Edit Mentor Profile" />
+        </form>
         <br><br>
-        <button class="button" type="button">Create Mentor Account</button>
+        <form action="creepExperienceLevel.html">
+            <input class="button" type="submit" value="Create Levels Of Experience" />
+        </form>
+        <br><br>
+        <form action="creepCreateMentor.html">
+            <input class="button" type="submit" value="Create Mentor Account" />
+        </form>
         <br><br><br><br><br>
-        <button class="buttonlogout" type="button">LOGOUT</button>
+        <form action="../loginPage.html">
+            <!--            <img src="../images/quit.png" alt="quitimage" width="20" height="20">-->
+            <input class="buttonLogout" type="submit" value="LOGOUT"/>
+        </form>
         <br><br>
     </div>
 </div>
