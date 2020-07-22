@@ -1,0 +1,78 @@
+.squareForTiles{
+    margin-left: 380px;
+}
+.squareForTiles2{
+    float: left;
+    margin-left: 380px;
+}
+.containerForTileSqares{
+    float: left;
+    margin-top: 50px;
+}
+.tile{
+    float: left;
+    margin: 20px;
+    width: 174px;
+    height: 210px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 25px;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+    background-color: #F1FAEE;
+}
+.assignmentButton{
+    background: #F2994A;
+    color: #F1FAEE;
+    border: none;
+    border-radius: 25px;
+    margin-left: 8px;
+    margin-top: 30px;
+    padding: 10px;
+    align-items: center;
+    float: bottom;
+    text-align: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 15px;
+    display: flex;
+}
+
+.returnToMainSiteButtonContainer{
+    float: right;
+    margin-top: 53px;
+    margin-right: 130px;
+}
+
+.goToMainSite{;
+    border-radius: 60px;
+    background: #457B9D;
+    color: white;
+    padding: 20px;
+    border: none;
+    text-align: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.bankBalanceContainer{
+    float: left;
+    margin-left: 357px;
+    background-color: #F1FAEE;
+    width: 900px;
+    height: 120px;
+}
+
+.bankBalance{
+    padding: 30px;
+    text-align: left;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    color: black;
+}
+
