@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>CreepStartingPage</title>
+    <title>CreepEditMentor</title>
     <link rel="stylesheet" type="text/css" href="../css/styles.css">
 </head>
 
@@ -26,11 +26,11 @@
             <input class="button" type="submit" value="See Mentor Profile" />
         </form>
         <br><br><br>
-        <form action="creepCreateClass.html">
+        <form action="creepStartingPage.html">
             <input class="button" type="submit" value="Create A Class" />
         </form>
         <br><br><br>
-        <form action="creepEditMentor.html">
+        <form action="creepStartingPage.html">
             <input class="button" type="submit" value="Edit Mentor Profile" />
         </form>
         <br><br><br>
@@ -43,7 +43,7 @@
         </form>
         <br><br><br><br>
         <form action="loginPage.html">
-<!--            <img src="../images/quit.png" alt="quitimage" width="20" height="20">-->
+            <!--            <img src="../images/quit.png" alt="quitimage" width="20" height="20">-->
             <input class="buttonLogout" type="submit" value="LOGOUT"/>
         </form>
         <br><br>
@@ -58,17 +58,24 @@
 <div class="menuBackground">
     <div class="content">
         <br><br>
-        <p class="innerContent">Name:</p>
-        <p class="innerContent">Surname:</p>
-        <p class="innerContent">Address:</p>
-        <p class="innerContent">Phone Number:</p>
-        <p class="innerContent">Email:</p><br>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br><br><br>
+        <label for="surname">Surname:</label>
+        <input type="text" id="surname" name="surname"><br><br><br><br>
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address"><br><br><br><br>
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone"><br><br><br><br>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email"><br><br><br><br>
+        <label for="class">Class:</label>
+        <input type="text" id="class" name="class"><br><br><br><br>
     </div>
 </div>
-<div class="seeGroups">
-    <div class="innerSeeGroups">
+<div class="editProfile">
+    <div class="innerEditProfile">
         <form action="creepStartingPage.html">
-            <input class="button2" type="submit" value="See Mentor Class" />
+            <input class="button2" type="submit" value="Update Mentor Profile" />
         </form>
     </div>
 </div>
