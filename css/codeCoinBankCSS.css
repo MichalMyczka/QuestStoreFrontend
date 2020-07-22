@@ -5,8 +5,9 @@
     float: left;
     margin-left: 380px;
 }
-.container{
+.containerForTileSqares{
     float: left;
+    margin-top: 50px;
 }
 .tile{
     float: left;
@@ -56,4 +57,12 @@
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
+}
+
+.bankBalance{
+    float: left;
+    margin-left: 357px;
+    background-color: #F1FAEE;
+    width: 900px;
+    height: 120px;
 }
