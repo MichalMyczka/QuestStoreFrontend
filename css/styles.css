@@ -143,3 +143,17 @@ p{
     width: 200px;
     height: 70px;
 }
+.editProfile{
+    background-color: #457B9D;
+    margin-left: 1235px;
+    margin-top: 10px;
+    text-align: center;
+    width: 322px;
+    height: 63px;
+}
+.innerEditProfile{
+    background-color: #A8DADC;
+    width: 280px;
+    border-radius: 10px;
+    margin-left: 20px;
+}
