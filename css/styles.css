@@ -1,9 +1,9 @@
 body{
-    background-color: #1D3557;
-    color: black;
+    background-color: var(--siteBackgroundColor);
+    color: var(--textColor);
 }
 .logo{
-    color: #F2994A;
+    color: var(--logoColor);
     text-align: center;
     font-size: 36px;
     display: inline-block;
@@ -11,7 +11,7 @@ body{
     margin-top: -50px;
 }
 .menu{
-    background-color: #457B9D;
+    background-color: var(--menuBackgroundColor);
     display: inline-block;
     float: left;
     width: 230px;
@@ -20,7 +20,7 @@ body{
     border-radius: 10px;
 }
 .loggedAs{
-    background-color: #A8DADC;
+    background-color: var(--innerMenuBackgroundColor);
     margin-top: 15px;
     border-radius: 20px;
     color: #293AD3;
@@ -30,94 +30,50 @@ body{
     height: 130px;
     font-size: 15px;
 }
-.mentorSearch{
-    background-color: #457B9D;
+.searchBar{
+    background-color: var(--menuBackgroundColor);
     margin-left: 600px;
     text-align: left;
     width: 611px;
     height: 84px;
 }
-.innerMentorSearch{
-    background-color: #A8DADC;
+.innerSearchBar{
+    background-color: var(--menuBackgroundColor);
     width: 450px;
     border-radius: 8px;
     margin-left: 20px;
 }
 .menuBackground{
-    background-color: #457B9D;
+    background-color: var(--menuBackgroundColor);
     margin-left: 600px;
     margin-top: 20px;
     text-align: left;
     width: 957px;
     height: 502px;
+    border-radius: 40px;
 }
 .innerContent{
-    background-color: #A8DADC;
+    background-color: var(--innerMenuBackgroundColor);
     border-radius: 10px;
     width: 300px;
     height: 35px;
 }
-.seeGroups{
-    background-color: #457B9D;
+.bottomButton{
+    background-color: var(--menuBackgroundColor);
     margin-left: 1235px;
     margin-top: 10px;
     text-align: center;
     width: 322px;
-    height: 63px;
+    height: 90px;
 }
-.button{
-    background-color: #F1FAEE;
-    border: none;
-    color: black;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 14px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 50px;
-    width: 200px;
-    height: 70px;
-}
-.button2{
-    background-color: #F1FAEE;
-    border: none;
-    color: black;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 50px;
-    width: 200px;
-    height: 30px;
-}
-.buttonLogout{
-    background-color: #cb3232;
-    border: none;
-    color: black;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 50px;
-    width: 200px;
-    height: 70px;
-}
-.innerSeeGroups {
-    background-color: #A8DADC;
+.innerBottomButton {
+    background-color: var(--innerMenuBackgroundColor);
     width: 280px;
     border-radius: 10px;
     margin-left: 20px;
 }
 #logForms{
-    background-color: #457B9D;
+    background-color: var(--menuBackgroundColor);
     width: 300px;
     height: 230px;
     border-radius: 20px;
@@ -130,70 +86,35 @@ p{
 .creepImage {
     border-radius: 50%;
 }
-.menuBackground{
-    background-color: #457B9D;
-    margin-left: 600px;
-    margin-top: 20px;
-    text-align: left;
-    width: 957px;
-    height: 502px;
-    border-radius: 40px;
-}
-.buttonExperience{
-    background-color: #F1FAEE;
+.button{
+    background-color: var(--buttonBackgroundColor);
     border: none;
-    color: black;
+    color: var(--textColor);
     padding: 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 14px;
-    margin: 4px 500px;
+    margin: 4px 2px;
     cursor: pointer;
     border-radius: 50px;
     width: 200px;
     height: 70px;
 }
-.editProfile{
-    background-color: #457B9D;
-    margin-left: 1235px;
-    margin-top: 10px;
+.buttonLogout{
+    background-color: var(--logoutButtonColor);
+    border: none;
+    color: var(--textColor);
+    padding: 20px;
     text-align: center;
-    width: 322px;
-    height: 63px;
-}
-.innerEditProfile{
-    background-color: #A8DADC;
-    width: 280px;
-    border-radius: 10px;
-    margin-left: 20px;
-}
-.createClass{
-    background-color: #457B9D;
-    margin-left: 1235px;
-    margin-top: 10px;
-    text-align: center;
-    width: 322px;
-    height: 63px;
-}
-.innerCreateClass{
-    background-color: #A8DADC;
-    width: 280px;
-    border-radius: 10px;
-    margin-left: 20px;
-}
-.codecoolerSearch{
-    background-color: #457B9D;
-    margin-left: 600px;
-    text-align: left;
-    width: 611px;
-    height: 84px;
-}
-.innerCodecoolerSearch{
-    background-color: #A8DADC;
-    width: 450px;
-    border-radius: 8px;
-    margin-left: 20px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 50px;
+    width: 200px;
+    height: 70px;
 }
 .firstRow{
     text-align: center;
