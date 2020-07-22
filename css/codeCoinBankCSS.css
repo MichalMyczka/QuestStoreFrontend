@@ -38,5 +38,22 @@
     font-size: 15px;
     line-height: 15px;
     display: flex;
-;}
+}
 
+.returnToMainSiteButtonContainer{
+    float: right;
+    margin-top: 53px;
+    margin-right: 130px;
+}
+
+.goToMainSite{;
+    border-radius: 60px;
+    background: #457B9D;
+    color: white;
+    padding: 20px;
+    border: none;
+    text-align: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+}
