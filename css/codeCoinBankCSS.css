@@ -59,10 +59,20 @@
     font-size: 20px;
 }
 
-.bankBalance{
+.bankBalanceContainer{
     float: left;
     margin-left: 357px;
     background-color: #F1FAEE;
     width: 900px;
     height: 120px;
 }
+
+.bankBalance{
+    padding: 30px;
+    text-align: left;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    color: black;
+}
+
