@@ -43,7 +43,7 @@
 
 .returnToMainSiteButtonContainer{
     float: right;
-    margin-top: 3%;
+    margin-top: 1.8%;
     margin-right: 5%;
 }
 
@@ -63,16 +63,16 @@
     float: left;
     margin-left: 19%;
     background-color: var(--buttonBackgroundColor);
-    width: 900px;
-    height: 120px;
+    width: 47.7%;
+    height: 55%;
 }
 
 .bankBalance{
-    padding: 30px;
+    padding: 3%;
     text-align: left;
     font-style: normal;
     font-weight: bold;
-    font-size: 50px;
+    font-size: 230%;
     color: var(--textColor);
 }
 
