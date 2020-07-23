@@ -10,59 +10,60 @@
 
 <body>
 
-<div class="logo">
-    <h1> <img src="../../images/books.png" alt="bookImage" width="60" height="60"> QUEST <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; STORE </h1>
-</div>
-
 <div class="menu">
     <div class="loggedAs">
         <div class="loggedCentered">
             <p>You Are Currently Logged As:</p>
-            <img src="../../images/poteznyGej.jpeg" alt="creepimage" width="60" height="60">
+            <img style="border-radius: 50%" src="../../images/poteznyGej.jpeg" alt="creepimage" width="60" height="60">
             <p style="float: left">Creep</p>
             <p style="clear: both"></p>
         </div>
     </div>
     <div class="menuOptions">
-        <br><br>
         <form action="creepStartingPage.html">
             <input class="button" type="submit" value="See Mentor Profile" />
         </form>
-        <br><br>
         <form action="creepCreateClass.html">
             <input class="button" type="submit" value="Create A Class" />
         </form>
-        <br><br>
         <form action="creepEditMentor.html">
             <input class="button" type="submit" value="Edit Mentor Profile" />
         </form>
-        <br><br>
         <form action="creepExperienceLevel.html">
             <input class="button" type="submit" value="Create Levels Of Experience" />
         </form>
-        <br><br>
         <form action="creepCreateMentor.html">
             <input class="button" type="submit" value="Create Mentor Account" />
         </form>
-        <br><br><br><br><br>
         <form action="../loginPage.html">
             <!--            <img src="../images/quit.png" alt="quitimage" width="20" height="20">-->
             <input class="buttonLogout" type="submit" value="LOGOUT"/>
         </form>
-        <br><br>
     </div>
+</div>
+
+<div class="logo">
+    <h1 class="upperLogo"> <img src="../../images/books.png" alt="bookImage" width="60" height="60"> QUEST <br> </h1>
+    <h1 class="bottomLogo">STORE </h1>
 </div>
 
 <div class="menuBackground">
     <div class="content">
-        <h2> Creating New Experience Level</h2>
-        <br><br><br><br>
-        <label for="levelTitle">Type Title Of Level</label>
-        <input type="text" id="levelTitle" name="levelTitle">
-        <br><br><br><br>
-        <label for="codepointAmount">Type CodePoints Amount For Level</label>
-        <input type="text" id="codepointAmount" name="codepointAmount">
-        <br><br><br><br><br><br><br><br><br><br>
+        <br>
+        <h2 style="text-align: center"> Creating New Experience Level</h2>
+        <div class="innerContent">
+            <label for="levelTitle">Title Of Level</label>
+            <input type="text" id="levelTitle" name="levelTitle">
+        </div>
+        <div class="innerContent">
+            <label for="codepointAmount">CP Amount For Level</label>
+            <input type="text" id="codepointAmount" name="codepointAmount">
+        </div>
+        <br>
+    </div>
+</div>
+<div class="bottomButton">
+    <div class="innerBottomButton">
         <form action="creepStartingPage.html">
             <input class="button" type="submit" value="Create Experience Level" />
         </form>
