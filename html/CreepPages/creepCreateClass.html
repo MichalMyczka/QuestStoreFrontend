@@ -19,25 +19,12 @@
         </div>
     </div>
     <div class="menuOptions">
-        <form action="creepStartingPage.html">
-            <input class="button" type="submit" value="See Mentor Profile" />
-        </form>
-        <form action="creepCreateClass.html">
-            <input class="button" type="submit" value="Create A Class" />
-        </form>
-        <form action="creepEditMentor.html">
-            <input class="button" type="submit" value="Edit Mentor Profile" />
-        </form>
-        <form action="creepExperienceLevel.html">
-            <input class="button" type="submit" value="Create Levels Of Experience" />
-        </form>
-        <form action="creepCreateMentor.html">
-            <input class="button" type="submit" value="Create Mentor Account" />
-        </form>
-        <form action="../loginPage.html">
-            <!--            <img src="../images/quit.png" alt="quitimage" width="20" height="20">-->
-            <input class="buttonLogout" type="submit" value="LOGOUT"/>
-        </form>
+        <a href="creepStartingPage.html" class="button">See Mentor Profile</a>
+        <a href="creepCreateClass.html" class="button">Create A Class</a>
+        <a href="creepEditMentor.html" class="button">Edit Mentor Profile</a>
+        <a href="creepExperienceLevel.html" class="button">Create Levels Of Experience</a>
+        <a href="creepCreateMentor.html" class="button">Create Mentor Account</a>
+        <a href="../loginPage.html" class="buttonLogout">LOGOUT</a>
     </div>
 </div>
 
@@ -46,30 +33,23 @@
     <h1 class="bottomLogo">STORE </h1>
 </div>
 
-
-
 <div class="menuBackground">
     <div class="content">
-        <br>
-        <div class="innerContent">
-            <label for="className">Type Name Of The Class:</label>
-            <input type="text" id="className" name="className">
-        </div>
-        <div class="innerContent">
-        <label for="speciality">Class Speciality:</label>
-        <input type="text" id="speciality" name="speciality">
-        </div>
-        <div class="innerContent">
-        <label for="advance">Class Advance Level:</label>
-        <input type="text" id="advance" name="advance">
-        </div>
-        <br>
-    </div>
-</div>
-<div class="bottomButton">
-    <div class="innerBottomButton">
-        <form action="creepStartingPage.html">
-            <input class="button" type="submit" value="Create New Class" />
+        <h2 style="text-align: center"> Creating New Class</h2>
+        <form action="creepStartingPage.html" class="formContainer">
+            <div class="innerContent">
+                <label for="className">Type Name Of The Class:</label>
+                <input type="text" id="className" name="className">
+            </div>
+            <div class="innerContent">
+                <label for="speciality">Class Speciality:</label>
+                <input type="text" id="speciality" name="speciality">
+            </div>
+            <div class="innerContent">
+                <label for="advance">Class Advance Level:</label>
+                <input type="text" id="advance" name="advance">
+            </div>
+            <button class="button" type="submit">Create New Class</button>
         </form>
     </div>
 </div>
