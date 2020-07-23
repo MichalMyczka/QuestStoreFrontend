@@ -67,7 +67,6 @@
 .bankBalanceContainer{
     float: left;
     margin-left: 19%;
-    background-color: var(--buttonBackgroundColor);
     width: 47.7%;
     height: 55%;
 }
@@ -78,6 +77,6 @@
     font-style: normal;
     font-weight: bold;
     font-size: 230%;
-    color: var(--textColor);
+    color: var(--buttonBackgroundColor);
 }
 
