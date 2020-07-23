@@ -59,11 +59,13 @@ body{
 .innerContent{
     background-color: var(--innerMenuBackgroundColor);
     border-radius: 10px;
-    width: 40%;
+    width: fit-content;
     height: 7%;
     text-align: left;
     margin: 4%;
     padding: 1%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 .bottomButton{
     background-color: var(--menuBackgroundColor);
