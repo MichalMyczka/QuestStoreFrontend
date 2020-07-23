@@ -20,16 +20,20 @@ body{
     text-align: center;
     border-radius: 10px;
 }
+
+.menuOptions {
+    padding: 1em;
+}
+
 .loggedAs{
     background-color: var(--innerMenuBackgroundColor);
-    margin-top: 7%;
     border-radius: 7%;
     color: var(--loggedAsTextColor);
     display: inline-block;
     text-align: center;
-    width: 87%;
     height: 15%;
     font-size: 15px;
+    margin: 1em;
 }
 .searchBar{
     background-color: var(--menuBackgroundColor);
@@ -53,17 +57,19 @@ body{
     margin-top: 1%;
     text-align: left;
     width: 50%;
-    height: 35%;
     border-radius: 40px;
+    padding-bottom: 0.05em;
 }
 .innerContent{
     background-color: var(--innerMenuBackgroundColor);
     border-radius: 10px;
-    width: 40%;
+    width: fit-content;
     height: 7%;
     text-align: left;
     margin: 4%;
     padding: 1%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 .bottomButton{
     background-color: var(--menuBackgroundColor);
@@ -95,15 +101,16 @@ body{
     background-color: var(--buttonBackgroundColor);
     border: none;
     color: var(--textColor);
-    padding: 10%;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 14px;
-    margin: 6%;
+    margin: 0.5em 0;
     cursor: pointer;
-    border-radius: 50px;
-    width: 85%;
+    border-radius: 2em;
+    width: 100%;
+    padding: 1em;
+    box-sizing: border-box;
 }
 .buttonLogout{
     background-color: var(--logoutButtonColor);
@@ -122,4 +129,22 @@ body{
 }
 .imagesRow{
     text-align: center;
+}
+
+.content > h2 {
+    padding: 1em 0;
+}
+
+
+.button:hover {
+    background: var(--gradient);
+    color: white;
+    box-shadow: 3px 3px 31px 3px rgba(111,220,247,1);
+}
+
+
+.button[type='submit'] {
+    position: absolute;
+    width: 300px;
+    right: 300px;
 }
