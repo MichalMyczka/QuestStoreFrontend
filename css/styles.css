@@ -1,17 +1,12 @@
 body{
     background-color: var(--siteBackgroundColor);
     color: var(--textColor);
-    /*width: 100vw;*/
-    /*height: 100vw;*/
 }
 .logo h1{
     color: var(--logoColor);
     float: top;
     text-align: center;
     font-size: 36px;
-    /*display: inline-block;*/
-    /*margin-left: 350px;*/
-    /*margin-top: -50px;*/
 }
 .bottomLogo{
     margin-left: 25%;
@@ -91,8 +86,8 @@ body{
 }
 #logForms {
     background-color: var(--menuBackgroundColor);
-    width: 300px;
-    height: 200px;
+    width: 15%;
+    height: 15%;
     border-radius: 20px;
     display: inline-block;
 }

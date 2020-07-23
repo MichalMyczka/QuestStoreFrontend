@@ -50,20 +50,34 @@
     <h1 class="bottomLogo">STORE </h1>
 </div>
 
-<div class="searchBar">
-    <div class="innerSearchBar">
-        <label for="csearch">Search Codecooler:</label>
-        <input type="text" id="csearch" name="csearch">
-    </div>
-</div>
 
 <div class="menuBackground">
     <div class="content">
-        <br><br>
-        <p class="innerContent">Name:</p>
-        <p class="innerContent">Surname:</p>
-        <p class="innerContent">Account Balance:</p>
-        <p class="innerContent">Artifacts Bought:</p> <br>
+        <br>
+        <div class="innerContent">
+            <label for="questName">Type Quest Title:</label>
+            <input type="text" id="questName" name="questName">
+        </div>
+        <div class="innerContent">
+            <label for="codecoinsEarned">Codecoins Earned:</label>
+            <input type="text" id="codecoinsEarned" name="codecoinsEarned">
+        </div>
+        <p class="innerContent">Is Quest Available:
+            <select>
+                <option>Yes</option>
+                <option>No</option>
+            </select>
+        </p>
+        <br>
+    </div>
+</div>
+
+</div>
+<div class="bottomButton">
+    <div class="innerBottomButton">
+        <form action="creepStartingPage.html">
+            <input class="button" type="submit" value="Add Quest" />
+        </form>
     </div>
 </div>
 
