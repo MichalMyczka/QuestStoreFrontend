@@ -140,3 +140,19 @@ body{
     width: 300px;
     right: 350px;
 }
+@keyframes animation {
+    0%   { left:0px; top:0px;}
+    25%  { left:200px; top:0px;}
+    50%  { left:0px; right:200px;}
+    75%  { left:200px; top:0px;}
+    100% { left:0px; top:0px;}
+}
+.animation{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    animation-name: animation;
+    animation-duration: 4s;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+}
