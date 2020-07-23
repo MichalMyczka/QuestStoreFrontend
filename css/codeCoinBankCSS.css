@@ -8,12 +8,13 @@
 .containerForTileSqares{
     float: left;
     margin-top: 50px;
+    width: calc(100% - 250px);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2em;
+    margin: 2em;
 }
 .tile{
-    float: left;
-    margin: 20px;
-    width: 174px;
-    height: 210px;
     font-style: normal;
     font-weight: normal;
     font-size: 25px;
@@ -21,7 +22,12 @@
     align-items: center;
     text-align: center;
     color: var(--textColor);
-    background-color: var(--buttonBackgroundColor)
+    background-color: var(--buttonBackgroundColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1em;
+    border-radius: 1em;
 }
 .assignmentButton{
     background: var(--logoColor);
