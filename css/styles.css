@@ -1,6 +1,8 @@
 body{
     background-color: var(--siteBackgroundColor);
     color: var(--textColor);
+    width: 100vw;
+    height: 100vw;
 }
 .logo h1{
     color: var(--logoColor);
@@ -14,63 +16,71 @@ body{
     background-color: var(--menuBackgroundColor);
     display: inline-block;
     float: left;
-    width: 230px;
-    height: 950px;
+    width: 13%;
+    height: 45%;
     text-align: center;
     border-radius: 10px;
 }
 .loggedAs{
     background-color: var(--innerMenuBackgroundColor);
-    margin-top: 15px;
-    border-radius: 20px;
-    color: #293AD3;
+    margin-top: 7%;
+    border-radius: 7%;
+    color: var(--loggedAsTextColor);
     display: inline-block;
     text-align: center;
-    width: 220px;
-    height: 130px;
+    width: 87%;
+    height: 15%;
     font-size: 15px;
 }
 .searchBar{
     background-color: var(--menuBackgroundColor);
-    margin-left: 600px;
+    margin-left: 31.5%;
     text-align: left;
-    width: 611px;
-    height: 84px;
+    width: 30%;
+    height: 3%;
 }
 .innerSearchBar{
-    background-color: var(--menuBackgroundColor);
-    width: 450px;
+    background-color: var(--innerMenuBackgroundColor);
+    width: 80%;
+    height: 50%;
     border-radius: 8px;
-    margin-left: 20px;
+    margin-left: 3%;
+    margin-top: 3%;
+    display: inline-block;
 }
 .menuBackground{
     background-color: var(--menuBackgroundColor);
-    margin-left: 600px;
-    margin-top: 20px;
+    margin-left: 31.5%;
+    margin-top: 1%;
     text-align: left;
-    width: 957px;
-    height: 502px;
+    width: 50%;
+    height: 25%;
     border-radius: 40px;
 }
 .innerContent{
     background-color: var(--innerMenuBackgroundColor);
     border-radius: 10px;
-    width: 300px;
-    height: 35px;
+    margin-top: 4%;
+    margin-left: 3%;
+    width: 40%;
+    height: 7%;
+    text-align: left;
 }
 .bottomButton{
     background-color: var(--menuBackgroundColor);
-    margin-left: 1235px;
-    margin-top: 10px;
+    margin-left: 64.5%;
+    margin-top: 1%;
     text-align: center;
-    width: 322px;
-    height: 90px;
+    width: 17%;
+    height: 5%;
 }
 .innerBottomButton {
     background-color: var(--innerMenuBackgroundColor);
-    width: 280px;
+    width: 85%;
+    height: 80%;
     border-radius: 10px;
-    margin-left: 20px;
+    margin-top: 3%;
+    display: inline-block;
 }
 #wrapper {
     text-align: center;
@@ -94,11 +104,10 @@ body{
     text-decoration: none;
     display: inline-block;
     font-size: 14px;
-    margin: 4px 2px;
+    margin-top: 4%;
     cursor: pointer;
     border-radius: 50px;
-    width: 200px;
-    height: 70px;
+    width: 80%;
 }
 .buttonLogout{
     background-color: var(--logoutButtonColor);
@@ -112,12 +121,8 @@ body{
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 50px;
-    width: 200px;
-    height: 70px;
+    width: 80%;
 }
-.firstRow{
-    text-align: center;
-}
-.secondRow {
+.imagesRow{
     text-align: center;
 }
