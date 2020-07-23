@@ -6,6 +6,7 @@ body{
 }
 .logo h1{
     color: var(--logoColor);
+    float: top;
     text-align: center;
     font-size: 36px;
     /*display: inline-block;*/
@@ -91,9 +92,6 @@ body{
     height: 200px;
     border-radius: 20px;
     display: inline-block;
-}
-.creepImage {
-    border-radius: 50%;
 }
 .button{
     background-color: var(--buttonBackgroundColor);
