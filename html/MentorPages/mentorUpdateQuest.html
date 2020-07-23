@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>MentorAddQuest</title>
+    <title>MentorUpdateQuest</title>
     <link rel="stylesheet" type="text/css" href="../../css/styles.css">
     <link rel="stylesheet" type="text/css" href="../../css/colors.css">
 </head>
@@ -38,12 +38,19 @@
     <h1 class="bottomLogo">STORE </h1>
 </div>
 
+<div class="searchBar">
+    <div class="innerContent">
+        <label for="csearch">Search Quest:</label>
+        <input type="text" id="csearch" name="csearch">
+    </div>
+</div>
+
 <div class="menuBackground">
     <div class="content">
-        <h2 style="text-align: center"> Creating New Quest</h2>
+        <h2 style="text-align: center"> Updating Quest Info</h2>
         <form action="mentorStartingPage.html" class="formContainer">
             <div class="innerContent">
-                <label for="questName">Type Quest Title:</label>
+                <label for="questName">Quest Title:</label>
                 <input type="text" id="questName" name="questName">
             </div>
             <div class="innerContent">
@@ -61,7 +68,7 @@
                     <option>No</option>
                 </select>
             </p>
-            <button class="button" type="submit">Add Quest</button>
+            <button class="button" type="submit">Update Quest</button>
         </form>
     </div>
 </div>

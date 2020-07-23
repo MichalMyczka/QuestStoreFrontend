@@ -1,6 +1,7 @@
 body{
     background-color: var(--siteBackgroundColor);
     color: var(--textColor);
+    cursor: pointer;
 }
 .logo h1{
     color: var(--logoColor);
@@ -20,11 +21,9 @@ body{
     text-align: center;
     border-radius: 10px;
 }
-
 .menuOptions {
     padding: 1em;
 }
-
 .loggedAs{
     background-color: var(--innerMenuBackgroundColor);
     border-radius: 7%;
@@ -44,15 +43,6 @@ body{
     padding-bottom: 0.001em;
     padding-top: 0.001em;
 }
-/*.innerSearchBar{*/
-/*    background-color: var(--innerMenuBackgroundColor);*/
-/*    width: 80%;*/
-/*    height: 50%;*/
-/*    border-radius: 8px;*/
-/*    margin: 3%;*/
-/*    display: inline-block;*/
-/*    padding: 1%;*/
-/*}*/
 .menuBackground{
     background-color: var(--menuBackgroundColor);
     margin-left: 31.5%;
@@ -132,19 +122,19 @@ body{
 .imagesRow{
     text-align: center;
 }
-
 .content > h2 {
     padding: 1em 0;
 }
-
-
 .button:hover {
-    background: var(--gradient);
+    background: var(--gradientButton);
     color: white;
     box-shadow: 3px 3px 31px 3px rgba(111,220,247,1);
 }
-
-
+.buttonLogout:hover{
+    background: var(--gradientLogout);
+    color: white;
+    box-shadow: 3px 3px 31px 3px rgba(111,220,247,1);
+}
 .button[type='submit'] {
     position: absolute;
     width: 300px;

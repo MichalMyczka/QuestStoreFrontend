@@ -7,5 +7,6 @@
     --textColor: black;
     --logoColor: #F2994A;
     --loggedAsTextColor: #293AD3;
-    --gradient: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    --gradientButton: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    --gradientLogout: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(198,52,52,1) 100%, rgba(0,212,255,1) 100%);
 }

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>MentorAddQuest</title>
+    <title>MentorUpdateArtifact</title>
     <link rel="stylesheet" type="text/css" href="../../css/styles.css">
     <link rel="stylesheet" type="text/css" href="../../css/colors.css">
 </head>
@@ -38,30 +38,37 @@
     <h1 class="bottomLogo">STORE </h1>
 </div>
 
+<div class="searchBar">
+    <div class="innerContent">
+        <label for="csearch">Search Artifact:</label>
+        <input type="text" id="csearch" name="csearch">
+    </div>
+</div>
+
 <div class="menuBackground">
     <div class="content">
-        <h2 style="text-align: center"> Creating New Quest</h2>
+        <h2 style="text-align: center"> Updating Artifact Info</h2>
         <form action="mentorStartingPage.html" class="formContainer">
             <div class="innerContent">
-                <label for="questName">Type Quest Title:</label>
-                <input type="text" id="questName" name="questName">
+                <label for="artifactName">Artifact Title:</label>
+                <input type="text" id="artifactName" name="artifactName">
             </div>
             <div class="innerContent">
-                <label for="codecoinsEarned">Codecoins Earned:</label>
-                <input type="text" id="codecoinsEarned" name="codecoinsEarned">
+                <label for="codecoinsCost">Codecoins Cost:</label>
+                <input type="text" id="codecoinsCost" name="codecoinsCost">
             </div>
             <div class="innerContent">
-                <label for="questDescription">Quest Description:</label>
-                <textarea id="questDescription" name="questDescription" rows="4" cols="50">
+                <label for="artifactDescription">Artifact Description:</label>
+                <textarea id="artifactDescription" name="artifactDescription" rows="4" cols="50">
                 </textarea>
             </div>
-            <p class="innerContent">Is Quest Available:
+            <p class="innerContent">This Artifact Is For:
                 <select>
-                    <option>Yes</option>
-                    <option>No</option>
+                    <option>Group</option>
+                    <option>Solo</option>
                 </select>
             </p>
-            <button class="button" type="submit">Add Quest</button>
+            <button class="button" type="submit">Update Artifact</button>
         </form>
     </div>
 </div>
