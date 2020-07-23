@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>MentorStartingPage</title>
+    <title>MentorAddQuest</title>
     <link rel="stylesheet" type="text/css" href="../../css/styles.css">
     <link rel="stylesheet" type="text/css" href="../../css/colors.css">
 </head>
@@ -20,28 +20,13 @@
         </div>
     </div>
     <div class="menuOptions">
-        <form action="mentorStartingPage.html">
-            <input class="button" type="submit" value="See Codecooler Account" />
-        </form>
-        <form action="mentorStartingPage.html">
-            <input class="button" type="submit" value="Add A New Quest" />
-        </form>
-        <form action="mentorStartingPage.html">
-            <input class="button" type="submit" value="Split Quest Into Categories" />
-        </form>
-        <form action="mentorStartingPage.html">
-            <input class="button" type="submit" value="Update Quest Details" />
-        </form>
-        <form action="mentorStartingPage.html">
-            <input class="button" type="submit" value="Create Codecooler Account" />
-        </form>
-        <form action="mentorStartingPage.html">
-            <input class="button" type="submit" value="Mark Quest As Done" />
-        </form>
-        <form action="../loginPage.html">
-            <!--            <img src="../images/quit.png" alt="quitimage" width="20" height="20">-->
-            <input class="buttonLogout" type="submit" value="LOGOUT"/>
-        </form>
+        <a href="mentorStartingPage.html" class="button">See Codecooler Account</a>
+        <a href="mentorStartingPage.html" class="button">Add A New Quest</a>
+        <a href="mentorStartingPage.html" class="button">Split Quest Into Categories</a>
+        <a href="mentorStartingPage.html" class="button">Update Quest Details</a>
+        <a href="mentorStartingPage.html" class="button">Create Codecooler Account</a>
+        <a href="mentorStartingPage.html" class="button">Mark Quest As Done</a>
+        <a href="../loginPage.html" class="buttonLogout">LOGOUT</a>
     </div>
 </div>
 
@@ -50,36 +35,29 @@
     <h1 class="bottomLogo">STORE </h1>
 </div>
 
-
 <div class="menuBackground">
     <div class="content">
-        <br>
-        <div class="innerContent">
-            <label for="questName">Type Quest Title:</label>
-            <input type="text" id="questName" name="questName">
-        </div>
-        <div class="innerContent">
-            <label for="codecoinsEarned">Codecoins Earned:</label>
-            <input type="text" id="codecoinsEarned" name="codecoinsEarned">
-        </div>
-        <p class="innerContent">Is Quest Available:
-            <select>
-                <option>Yes</option>
-                <option>No</option>
-            </select>
-        </p>
-        <br>
-    </div>
-</div>
-
-</div>
-<div class="bottomButton">
-    <div class="innerBottomButton">
-        <form action="creepStartingPage.html">
-            <input class="button" type="submit" value="Add Quest" />
+        <h2 style="text-align: center"> Creating New Quest</h2>
+        <form action="creepStartingPage.html" class="formContainer">
+            <div class="innerContent">
+                <label for="questName">Type Quest Title:</label>
+                <input type="text" id="questName" name="questName">
+            </div>
+            <div class="innerContent">
+                <label for="codecoinsEarned">Codecoins Earned:</label>
+                <input type="text" id="codecoinsEarned" name="codecoinsEarned">
+            </div>
+            <p class="innerContent">Is Quest Available:
+                <select>
+                    <option>Yes</option>
+                    <option>No</option>
+                </select>
+            </p>
+            <button class="button" type="submit">Add Quest</button>
         </form>
     </div>
 </div>
+
 
 </body>
 

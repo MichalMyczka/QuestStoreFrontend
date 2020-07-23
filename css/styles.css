@@ -41,16 +41,18 @@ body{
     text-align: left;
     width: 30%;
     height: 4%;
+    padding-bottom: 0.001em;
+    padding-top: 0.001em;
 }
-.innerSearchBar{
-    background-color: var(--innerMenuBackgroundColor);
-    width: 80%;
-    height: 50%;
-    border-radius: 8px;
-    margin: 3%;
-    display: inline-block;
-    padding: 1%;
-}
+/*.innerSearchBar{*/
+/*    background-color: var(--innerMenuBackgroundColor);*/
+/*    width: 80%;*/
+/*    height: 50%;*/
+/*    border-radius: 8px;*/
+/*    margin: 3%;*/
+/*    display: inline-block;*/
+/*    padding: 1%;*/
+/*}*/
 .menuBackground{
     background-color: var(--menuBackgroundColor);
     margin-left: 31.5%;
@@ -58,7 +60,7 @@ body{
     text-align: left;
     width: 50%;
     border-radius: 40px;
-    padding-bottom: 0.05em;
+    padding-bottom: 0.005em;
 }
 .innerContent{
     background-color: var(--innerMenuBackgroundColor);
@@ -146,5 +148,5 @@ body{
 .button[type='submit'] {
     position: absolute;
     width: 300px;
-    right: 300px;
+    right: 350px;
 }
