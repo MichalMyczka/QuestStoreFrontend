@@ -163,12 +163,12 @@ h2{
     animation-iteration-count: infinite;
 }
 .square{
-    margin: 0.9em;
+    margin: 1.9em;
     float: left;
 }
 .artifacts{
     float: left;
     background: var(--menuBackgroundColor);
     border-radius: 10px;
-    margin-left: 100px;
+    margin-left: 13%;
 }
