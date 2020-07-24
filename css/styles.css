@@ -1,7 +1,7 @@
 body{
-    background-color: var(--siteBackgroundColor);
+    background: var(--siteBackgroundColor);
     color: var(--textColor);
-    cursor: pointer;
+    cursor: url('../images/cursor3.cur'), default;
 }
 .logo h1{
     color: var(--logoColor);
@@ -13,7 +13,7 @@ body{
     margin-left: 25%;
 }
 .menu{
-    background-color: var(--menuBackgroundColor);
+    background: var(--menuBackgroundColor);
     display: inline-block;
     float: left;
     width: 13%;
@@ -35,7 +35,7 @@ body{
     margin: 1em;
 }
 .searchBar{
-    background-color: var(--menuBackgroundColor);
+    background: var(--menuBackgroundColor);
     margin-left: 31.5%;
     text-align: left;
     width: 30%;
@@ -44,7 +44,7 @@ body{
     padding-top: 0.001em;
 }
 .menuBackground{
-    background-color: var(--menuBackgroundColor);
+    background: var(--menuBackgroundColor);
     margin-left: 31.5%;
     margin-top: 1%;
     text-align: left;
@@ -64,7 +64,7 @@ body{
     grid-template-columns: repeat(2, 1fr);
 }
 .bottomButton{
-    background-color: var(--menuBackgroundColor);
+    background: var(--menuBackgroundColor);
     margin-left: 64.5%;
     margin-top: 1%;
     text-align: center;
@@ -83,7 +83,7 @@ body{
     text-align: center;
 }
 #logForms {
-    background-color: var(--menuBackgroundColor);
+    background: var(--menuBackgroundColor);
     width: 15%;
     height: 15%;
     border-radius: 20px;
@@ -146,6 +146,15 @@ body{
     50%  { left:0px; right:200px;}
     75%  { left:200px; top:0px;}
     100% { left:0px; top:0px;}
+}
+@keyframes colors {
+    0%   {color: violet;}
+    25%  {color: blue;}
+    50%  {color: #A8DADC;}
+    100% {color: violet;}
+}
+h2{
+    animation: colors 4s infinite;
 }
 .animation{
     width: 100px;
