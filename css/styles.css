@@ -119,9 +119,6 @@ body{
     margin-top: 40%;
     margin-bottom: 5%;
 }
-.imagesRow{
-    text-align: center;
-}
 .content > h2 {
     padding: 1em 0;
 }
@@ -164,4 +161,11 @@ h2{
     animation-duration: 4s;
     animation-delay: 0.5s;
     animation-iteration-count: infinite;
+}
+.square{
+    margin: 0.9em;
+    float: left;
+}
+.artifacts{
+    float: left;
 }
