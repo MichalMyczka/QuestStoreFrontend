@@ -168,4 +168,7 @@ h2{
 }
 .artifacts{
     float: left;
+    background: var(--menuBackgroundColor);
+    border-radius: 10px;
+    margin-left: 100px;
 }
