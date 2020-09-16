@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Quest store</title>
+    <script src="../js/login.js" defer></script>
     <link rel="stylesheet" type="text/css" href="../css/styles.css">
     <link rel="stylesheet" type="text/css" href="../css/colors.css">
 </head>
@@ -20,16 +21,19 @@
 
 <div style="padding-top: 1em" class="menuBackground">
     <div class="content">
-        <form action="CreepPages/creepStartingPage.html" class="formContainer">
+        <div class="message">
+
+        </div>
+        <form id="login-form" class="formContainer">
             <div class="innerContent">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username">
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email">
             </div>
             <div class="innerContent">
                 <label for="password">Password: (8 characters minimum)</label>
                 <input type="password" id="password" name="password">
             </div>
-            <button class="button" type="submit">Sign in</button>
+            <button class="button">Sign in</button>
         </form>
     </div>
 </div>
