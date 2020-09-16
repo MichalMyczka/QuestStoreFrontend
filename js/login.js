@@ -24,9 +24,20 @@ function login(data) {
         .then(function (user) {
             // user is authenticated, and cookie send by server is set in browser
             console.log(user);
-            if(user.role_ID ===3) {
-                window.location.href = "CreepPages/creepStartingPage.html";
+            switch (user.role_ID) {
+                case 3:
+                    window.location.href = "CreepPages/creepStartingPage.html";
+                    break;
+                case 2:
+                    window.location.href = "MentorPages/mentorStartingPage.html";
+                    break;
+                case 1:
+                    window.location.href = "CodecoolerPages/codecoolerStartingPage.html"
+                    break;
             }
+            // if(user.role_ID ===3) {
+            //     window.location.href = "CreepPages/creepStartingPage.html";
+            // }
 
         }).catch(function (error) {
         // user NOT authenticated, server return different status than 200-299
