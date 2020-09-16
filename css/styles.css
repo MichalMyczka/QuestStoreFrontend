@@ -138,11 +138,11 @@ body{
     right: 350px;
 }
 @keyframes animation {
-    0%   { left:0px; top:0px;}
-    25%  { left:200px; top:0px;}
-    50%  { left:0px; right:200px;}
-    75%  { left:200px; top:0px;}
-    100% { left:0px; top:0px;}
+    0%   { left:0; top:0;}
+    25%  { left:200px; top:0;}
+    50%  { left:0; right:200px;}
+    75%  { left:200px; top:0;}
+    100% { left:0; top:0;}
 }
 @keyframes colors {
     0%   {color: violet;}
@@ -171,4 +171,63 @@ h2{
     background: var(--menuBackgroundColor);
     border-radius: 10px;
     margin-left: 13%;
+}
+.infoContainer{
+    background: var(--menuBackgroundColor);
+    margin-left: 31.5%;
+    margin-top: 3%;
+    width: 50%;
+    border-radius: 40px;
+    padding-bottom: 0.005em;
+    height: 50%;
+    text-align: center;
+}
+.totalEarnings{
+    background-color: var(--innerMenuBackgroundColor);
+    border-radius: 10px;
+    width: fit-content;
+    height: 7%;
+    padding: 1%;
+    text-align: center;
+    margin: 4% 4% 4% 32%;
+    font-size: 150%;
+}
+.boughtArtifacts{
+    background-color: var(--innerMenuBackgroundColor);
+    border-radius: 10px;
+    width: fit-content;
+    height: 7%;
+    padding: 1%;
+    margin: 3% 4% 5% 35%;
+    text-align: center;
+    font-size: 150%;
+}
+.yourCoins{
+    border-radius: 60px;
+    background: var(--menuBackgroundColor);
+    color: var(--buttonBackgroundColor);
+    padding: 20px;
+    border: none;
+    text-align: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 130%;
+}
+.coinsContainer{
+    float: right;
+    margin-top: 1.8%;
+    margin-right: 5%;
+}
+.experience{
+    background-color: var(--innerMenuBackgroundColor);
+    border-radius: 10px;
+    width: fit-content;
+    height: 7%;
+    padding: 1%;
+    margin: 3% 4% 0 33%;
+    text-align: center;
+    font-size: 150%;
+}
+#exp{
+
 }

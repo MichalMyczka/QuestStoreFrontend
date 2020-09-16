@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <title>MentorAddArtifact</title>
+    <title>MentorSplitArtifacts</title>
     <link rel="stylesheet" type="text/css" href="../../css/styles.css">
     <link rel="stylesheet" type="text/css" href="../../css/colors.css">
 </head>
-
 <body>
 
 <div class="menu">
@@ -38,35 +36,30 @@
     <h1 class="bottomLogo">STORE </h1>
 </div>
 
+<div class="searchBar">
+    <div class="innerContent">
+        <label for="csearch">Search Artifact:</label>
+        <input type="text" id="csearch" name="csearch">
+    </div>
+</div>
+
 <div class="menuBackground">
     <div class="content">
-        <h2 style="text-align: center"> Creating New Artifact</h2>
-        <form action="mentorStartingPage.html" class="formContainer">
-            <div class="innerContent">
-                <label for="artifactName">Type Artifact Title:</label>
-                <input type="text" id="artifactName" name="artifactName">
-            </div>
-            <div class="innerContent">
-                <label for="codecoinsCost">Codecoins Cost:</label>
-                <input type="text" id="codecoinsCost" name="codecoinsCost">
-            </div>
-            <div class="innerContent">
-                <label for="artifactDescription">Artifact Description:</label>
-                <textarea id="artifactDescription" name="artifactDescription" rows="4" cols="50">
-                </textarea>
-            </div>
+        <h2 style="text-align: center"> Split Artifact To Categories</h2>
+        <form action="creepStartingPage.html" class="formContainer">
+            <p class="innerContent">Artifact Title:</p>
+            <p class="innerContent">Codecoins Cost:</p>
+            <p class="innerContent">Artifact Description:</p>
+            <p class="innerContent">Artifacts Bought:</p>
             <p class="innerContent">This Artifact Is For:
                 <select>
-                    <option>Group</option>
-                    <option>Solo</option>
+                    <option>Group Artifact</option>
+                    <option>Solo Artifact</option>
                 </select>
-            </p>
-            <button class="button" type="submit">Add Artifact</button>
         </form>
     </div>
 </div>
 
 
 </body>
-
 </html>
