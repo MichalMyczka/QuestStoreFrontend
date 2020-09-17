@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>MentorUpdateQuest</title>
+    <script src="../../js/questUpdate.js" defer></script>
     <link rel="stylesheet" type="text/css" href="../../css/styles.css">
     <link rel="stylesheet" type="text/css" href="../../css/colors.css">
 </head>
@@ -39,9 +40,10 @@
 </div>
 
 <div class="searchBar">
-    <div class="innerContent">
-        <label for="csearch">Search Quest:</label>
-        <input type="text" id="csearch" name="csearch">
+    <div id="innerContent" class="formContainer">
+        <form id="questGet-form">
+            <div id="questsList"></div>
+        </form>
     </div>
 </div>
 
@@ -59,25 +61,26 @@
             </div>
             <div class="innerContent">
                 <label for="questDescription">Quest Description:</label>
-                <textarea id="questDescription" name="questDescription" rows="4" cols="50">
-                </textarea>
+                <textarea id="questDescription" name="questDescription" rows="4" cols="50"></textarea>
             </div>
-            <p class="innerContent">Is Quest Basic:
-                <label>
-                    <select>
-                        <option>Yes</option>
-                        <option>No</option>
+            <div class="innerContent">
+                <label for="questIs_basic">
+                    Is Quest Basic:
+                    <select id="questIs_basic" name="questIs_basic">
+                        <option>true</option>
+                        <option>false</option>
                     </select>
                 </label>
-            </p>
-            <p class="innerContent">Is Quest Active:
-                <label>
-                    <select>
-                        <option>Yes</option>
-                        <option>No</option>
+            </div>
+            <div class="innerContent">
+                <label for="questIs_Active">
+                    Is Quest Active:
+                    <select id="questIs_Active" name="questIs_Active">
+                        <option>true</option>
+                        <option>false</option>
                     </select>
                 </label>
-            </p>
+            </div>
             <button class="button" id="sub">Update Quest</button>
         </form>
     </div>

@@ -21,9 +21,9 @@ function addQuest(data) {
             }
             return response.json();
         })
-        .then(function (quest) {
+        .then(function (questAdd) {
 
-            console.log(quest);
+            console.log(questAdd);
 
 
         }).catch(function (error) {
