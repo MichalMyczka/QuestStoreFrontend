@@ -35,9 +35,6 @@ function login(data) {
                     window.location.href = "CodecoolerPages/codecoolerStartingPage.html"
                     break;
             }
-            // if(user.role_ID ===3) {
-            //     window.location.href = "CreepPages/creepStartingPage.html";
-            // }
 
         }).catch(function (error) {
         // user NOT authenticated, server return different status than 200-299
