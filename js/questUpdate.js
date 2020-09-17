@@ -16,17 +16,18 @@ function questListHtml (){
 }
 
 function addToList(){
-    getQuests();
     questListHtml();
     console.log(questList);
-    console.log("bla");
+    let sel = document.getElementById("quest-list-inner");
     for(let i=0; i <= questList.length; i++){
-        document.getElementById("quest-list-inner").innerHTML += `
-        <option> questList[i] </option>`
+        let opt = document.createElement('option');
+        opt.innerHTML = questList[i];
+        opt.value = questList[i];
+        sel.appendChild(opt);
     }
 }
 
-addToList();
+getQuests();
 
 form.addEventListener('submit', function (e) {
     e.preventDefault();
@@ -50,9 +51,8 @@ function getQuests(){
         .then(function (getQuests) {
 
             console.log(getQuests);
-            function addToQuestList (){
-                questList += getQuests;
-            }
+            questList = getQuests;
+            addToList();
 
         }).catch(function (error) {
 
@@ -84,5 +84,6 @@ function updateQuest(data) {
         const message = document.querySelector(".message");
         message.innerHTML = error;
     });
+
 
 }
