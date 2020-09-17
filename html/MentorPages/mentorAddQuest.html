@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>MentorAddQuest</title>
+    <script src="../../js/questAdd.js" defer></script>
     <link rel="stylesheet" type="text/css" href="../../css/styles.css">
     <link rel="stylesheet" type="text/css" href="../../css/colors.css">
 </head>
@@ -41,7 +42,7 @@
 <div class="menuBackground">
     <div class="content">
         <h2 style="text-align: center"> Creating New Quest</h2>
-        <form action="mentorStartingPage.html" class="formContainer">
+        <form id="questAdd-form" class="formContainer">
             <div class="innerContent">
                 <label for="questName">Type Quest Title:</label>
                 <input type="text" id="questName" name="questName">
@@ -56,12 +57,14 @@
                 </textarea>
             </div>
             <p class="innerContent">Is Quest Available:
-                <select>
-                    <option>Yes</option>
-                    <option>No</option>
-                </select>
+                <label>
+                    <select>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </label>
             </p>
-            <button class="button" type="submit">Add Quest</button>
+            <button class="button">Add Quest</button>
         </form>
     </div>
 </div>
