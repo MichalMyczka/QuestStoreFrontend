@@ -7,8 +7,6 @@ function questListHtml (){
     <div class="quests-list">
         <label>
             <select id="quest-list-inner">
-                <option>Group</option>
-                <option>Solo</option>
             </select>
         </label>
     </div>
@@ -21,10 +19,14 @@ function addToList(){
     let sel = document.getElementById("quest-list-inner");
     for(let i=0; i <= questList.length; i++){
         let opt = document.createElement('option');
-        opt.innerHTML = questList[i];
-        opt.value = questList[i];
+        opt.innerHTML = questList[i]["quest_Name"];
+        opt.value = questList[i]["quest_Name"];
         sel.appendChild(opt);
     }
+    // for(let i=0; i <= questList.length; i++){
+    //     document.getElementById("quest-list-inner").innerHTML += `
+    //     <option> questList[i] </option>`
+    // }
 }
 
 getQuests();
