@@ -132,7 +132,7 @@ body{
     color: white;
     box-shadow: 3px 3px 31px 3px rgba(111,220,247,1);
 }
-.button[type='submit'] {
+.button[id='sub'] {
     position: absolute;
     width: 300px;
     right: 350px;
