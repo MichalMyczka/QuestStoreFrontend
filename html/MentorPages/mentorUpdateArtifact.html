@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>MentorUpdateArtifact</title>
+    <script src="../../js/updateArtifact.js" defer></script>
     <link rel="stylesheet" type="text/css" href="../../css/styles.css">
     <link rel="stylesheet" type="text/css" href="../../css/colors.css">
 </head>
@@ -39,9 +40,10 @@
 </div>
 
 <div class="searchBar">
-    <div class="innerContent">
-        <label for="csearch">Search Artifact:</label>
-        <input type="text" id="csearch" name="csearch">
+    <div id="innerContent" class="formContainer">
+        <form id="artifactGet-form">
+            <div id="artifactsList"></div>
+        </form>
     </div>
 </div>
 
@@ -63,18 +65,18 @@
                 </textarea>
             </div>
             <p class="innerContent">This Artifact Is For:
-                <label>
-                    <select>
+                <label for="artifactIs_solo">
+                    <select id="artifactIs_solo" name="artifactIs_solo">
                         <option>Group</option>
                         <option>Solo</option>
                     </select>
                 </label>
             </p>
             <p class="innerContent">Is Quest Active:
-                <label>
-                    <select>
-                        <option>Yes</option>
-                        <option>No</option>
+                <label for="artifactIs_Active">
+                    <select id="artifactIs_Active" name="artifactIs_Active">
+                        <option>true</option>
+                        <option>false</option>
                     </select>
                 </label>
             </p>
