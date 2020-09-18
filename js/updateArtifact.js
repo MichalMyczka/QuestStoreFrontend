@@ -1,25 +1,26 @@
 const form = document.querySelector("#artifactUpdate-form");
 const form2 = document.querySelector("#artifactGet-form");
-let artifactsList = [];
+let artifactList = [];
 
 function artifactListHtml(){
     document.getElementById("artifactsList").innerHTML = `
     <div class="artifacts-list">
-    <label>
-        <select id="artifacts-list-inner"></select>
-</label>
-</div>
+        <label>
+            <select id="artifacts-list-inner">
+            </select>
+        </label>
+    </div>
 `;
 }
 
-function addToList() {
+function addArtifactsToList() {
     artifactListHtml();
-    console.log(artifactsList);
-    let sel = document.getElementById('artifacts-list-inner');
-    for (let i = 0; i < artifactsList.length; i++) {
+    console.log(artifactList);
+    let sel = document.getElementById("artifacts-list-inner");
+    for (let i = 0; i <= artifactList.length; i++) {
         let opt = document.createElement('option');
-        opt.innerHTML = artifactsList[i]["artifact_Name"];
-        opt.value = artifactsList[i]["artifact_Name"];
+        opt.innerHTML = artifactList[i]["artifact_Name"];
+        opt.value = artifactList[i]["artifact_Name"];
         sel.appendChild(opt);
     }
 }
@@ -34,6 +35,7 @@ form.addEventListener('submit', function (e) {
 });
 
 function getArtifacts(){
+    console.log("blep");
     fetch("http://localhost:8000/updateArtifact",
         {
             credentials: 'same-origin',
@@ -43,13 +45,14 @@ function getArtifacts(){
             if (!response.ok) {
                 throw Error(response.statusText);
             }
+            console.log("blep");
             return response.json();
         })
         .then(function (getArtifacts) {
-
+            console.log("blep");
             console.log(getArtifacts);
-            artifactsList = getArtifacts;
-            addToList();
+            artifactList = getArtifacts;
+            addArtifactsToList();
 
         }).catch(function (error) {
 

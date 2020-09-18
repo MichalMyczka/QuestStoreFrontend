@@ -50,7 +50,7 @@
 <div class="menuBackground">
     <div class="content">
         <h2 style="text-align: center"> Updating Artifact Info</h2>
-        <form action="mentorStartingPage.html" class="formContainer">
+        <form id="artifactUpdate-form" class="formContainer">
             <div class="innerContent">
                 <label for="artifactName">Artifact Title:</label>
                 <input type="text" id="artifactName" name="artifactName">
@@ -64,22 +64,24 @@
                 <textarea id="artifactDescription" name="artifactDescription" rows="4" cols="50">
                 </textarea>
             </div>
-            <p class="innerContent">This Artifact Is For:
+            <div class="innerContent">
                 <label for="artifactIs_solo">
+                    This Artifact Is For:
                     <select id="artifactIs_solo" name="artifactIs_solo">
                         <option>Group</option>
                         <option>Solo</option>
                     </select>
                 </label>
-            </p>
-            <p class="innerContent">Is Quest Active:
+            </div>
+            <div class="innerContent">
                 <label for="artifactIs_Active">
+                    Is Artifact Active:
                     <select id="artifactIs_Active" name="artifactIs_Active">
                         <option>true</option>
                         <option>false</option>
                     </select>
                 </label>
-            </p>
+            </div>
             <button class="button" id="sub">Update Artifact</button>
         </form>
     </div>

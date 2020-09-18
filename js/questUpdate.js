@@ -1,5 +1,5 @@
 const form = document.querySelector("#questUpdate-form");
-const form2 = document.querySelector("#questGet-form")
+const form2 = document.querySelector("#questGet-form");
 let questList = [];
 
 function questListHtml (){
@@ -13,7 +13,7 @@ function questListHtml (){
 `;
 }
 
-function addToList(){
+function addQuestsToList(){
     questListHtml();
     console.log(questList);
     let sel = document.getElementById("quest-list-inner");
@@ -23,10 +23,6 @@ function addToList(){
         opt.value = questList[i]["quest_Name"];
         sel.appendChild(opt);
     }
-    // for(let i=0; i <= questList.length; i++){
-    //     document.getElementById("quest-list-inner").innerHTML += `
-    //     <option> questList[i] </option>`
-    // }
 }
 
 getQuests();
@@ -54,7 +50,7 @@ function getQuests(){
 
             console.log(getQuests);
             questList = getQuests;
-            addToList();
+            addQuestsToList();
 
         }).catch(function (error) {
 
