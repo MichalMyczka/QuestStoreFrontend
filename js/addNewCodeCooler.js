@@ -3,11 +3,12 @@ const form = document.querySelector("#createCodeCooler-form");
 form.addEventListener('submit', function (e) {
     e.preventDefault();
 
-    const data = `codeCoolerName=${this.codeCoolerName.value}
-    &codeCoolerSurname=${this.codeCoolerSurname.value}
+    const data = `user_Name=${this.user_Name.value}
+    &user_Surname=${this.user_Surname.value}
     &codeCoolerAdress=${this.codeCoolerAdress.value}
-    &codeCoolerPhone=${this.codeCoolerPhone.value}
-    &codeCoolerEmail=${this.codeCoolerEmail.value}`;
+    &email=${this.email.value}`;
+
+    //&codeCoolerPhone=${this.codeCoolerPhone.value} goes up to data, commented for test
 
     console.log(data);
     addUser(data);
@@ -28,20 +29,6 @@ function addUser(data) {
         })
         .then(function (data) {
             console.log(data);
-            // switch (user.role_ID) {
-            //     case 3:
-            //         window.location.href = "CreepPages/creepStartingPage.html";
-            //         break;
-            //     case 2:
-            //         window.location.href = "MentorPages/mentorStartingPage.html";
-            //         break;
-            //     case 1:
-            //         window.location.href = "CodecoolerPages/codecoolerStartingPage.html"
-            //         break;
-            // }
-            // if(user.role_ID ===3) {
-            //     window.location.href = "CreepPages/creepStartingPage.html";
-            // }
 
         }).catch(function (error) {
         const message = document.querySelector(".message");
