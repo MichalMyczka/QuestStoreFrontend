@@ -19,8 +19,8 @@ function addQuestsToList(){
     let sel = document.getElementById("quest-list-inner");
     for(let i=0; i <= questList.length; i++){
         let opt = document.createElement('option');
-        opt.innerHTML = questList[i]["quest_Name"];
-        opt.value = questList[i]["quest_Name"];
+        opt.innerHTML = questList[i]["questName"];
+        opt.value = questList[i]["questName"];
         sel.appendChild(opt);
     }
 }
@@ -29,7 +29,7 @@ getQuests();
 
 form.addEventListener('submit', function (e) {
     e.preventDefault();
-    const data = `questName=${this.questName.value}&codecoinsEarned=${this.codecoinsEarned.value}&questDescription=${this.questDescription.value}&questIs_basic=${this.questIs_basic.value}&questIs_Active=${this.questIs_Active.value}`;
+    const data = `questName=${this.questName.value}&codecoinsEarned=${this.codecoinsEarned.value}&questDescription=${this.questDescription.value}&questIsBasic=${this.questIsBasic.value}&questIsActive=${this.questIsActive.value}`;
     console.log(data);
     updateQuest(data);
 });

@@ -24,7 +24,7 @@ function login(data) {
         .then(function (user) {
             // user is authenticated, and cookie send by server is set in browser
             console.log(user);
-            switch (user.role_ID) {
+            switch (user.roleID) {
                 case 3:
                     window.location.href = "CreepPages/creepStartingPage.html";
                     break;

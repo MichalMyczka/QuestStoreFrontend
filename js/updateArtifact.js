@@ -19,8 +19,8 @@ function addArtifactsToList() {
     let sel = document.getElementById("artifacts-list-inner");
     for (let i = 0; i <= artifactList.length; i++) {
         let opt = document.createElement('option');
-        opt.innerHTML = artifactList[i]["artifact_Name"];
-        opt.value = artifactList[i]["artifact_Name"];
+        opt.innerHTML = artifactList[i]["artifactName"];
+        opt.value = artifactList[i]["artifactName"];
         sel.appendChild(opt);
     }
 }
@@ -29,7 +29,7 @@ getArtifacts();
 
 form.addEventListener('submit', function (e) {
     e.preventDefault();
-    const data = `artifactName=${this.artifactName.value}&codecoinsCost=${this.codecoinsCost.value}&artifactDescription=${this.artifactDescription.value}&artifactIs_solo=${this.artifactIs_solo.value}&artifactIs_Active=${this.artifactIs_Active.value}`;
+    const data = `artifactName=${this.artifactName.value}&codecoinsCost=${this.codecoinsCost.value}&artifactDescription=${this.artifactDescription.value}&artifactIsSolo=${this.artifactIsSolo.value}&artifactIsActive=${this.artifactIsActive.value}`;
     console.log(data);
     updateArtifact(data);
 });
@@ -45,11 +45,9 @@ function getArtifacts(){
             if (!response.ok) {
                 throw Error(response.statusText);
             }
-            console.log("blep");
             return response.json();
         })
         .then(function (getArtifacts) {
-            console.log("blep");
             console.log(getArtifacts);
             artifactList = getArtifacts;
             addArtifactsToList();
