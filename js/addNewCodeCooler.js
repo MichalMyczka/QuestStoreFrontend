@@ -3,12 +3,13 @@ const form = document.querySelector("#createCodeCooler-form");
 form.addEventListener('submit', function (e) {
     e.preventDefault();
 
-    const data = `user_Name=${this.user_Name.value}
-    &user_Surname=${this.user_Surname.value}
-    &codeCoolerAdress=${this.codeCoolerAdress.value}
-    &email=${this.email.value}`;
+    // const data = `user_Name=${this.user_Name.value}
+    // &user_Surname=${this.user_Surname.value}
+    // &codeCoolerAdress=${this.codeCoolerAdress.value}
+    // &email=${this.email.value}`;
 
-    //&codeCoolerPhone=${this.codeCoolerPhone.value} goes up to data, commented for test
+    const data = `email=${this.email.value}`;
+
 
     console.log(data);
     addUser(data);
@@ -27,11 +28,13 @@ function addUser(data) {
             }
             return response.json();
         })
-        .then(function (data) {
-            console.log(data);
+        .then(function (user) {
+            // user is authenticated, and cookie send by server is set in browser
+            console.log(user);
+        })
 
-        }).catch(function (error) {
-        const message = document.querySelector(".message");
-        message.innerHTML = error;
-    });
+        .catch(function (error) {
+            const message = document.querySelector(".message");
+            message.innerHTML = error;
+        });
 }
