@@ -1,6 +1,7 @@
 const form = document.querySelector("#questUpdate-form");
 let questList = [];
 let questListDone = document.getElementById("quest-list-inner");
+let data;
 
 
 
@@ -21,6 +22,7 @@ questListDone.onchange = function (){
         // console.log((questListDone.valueOf()[i]).value);
         // console.log(questList[i]["questName"]);
         if (questList[i]["questName"] === (questListDone.valueOf()).value){
+            data = `questID=${questList[i]["questID"]}&`
             document.getElementById("questName").value = questList[i]["questName"];
             document.getElementById("codecoinsEarned").value = questList[i]["reward"];
             document.getElementById("questDescription").value = questList[i]["description"];
@@ -32,7 +34,8 @@ questListDone.onchange = function (){
 
 form.addEventListener('submit', function (e) {
     e.preventDefault();
-    const data = `questName=${this.questName.value}&codecoinsEarned=${this.codecoinsEarned.value}&questDescription=${this.questDescription.value}&questIsBasic=${this.questIsBasic.value}&questIsActive=${this.questIsActive.value}`;
+    data += `questName=${this.questName.value}&codecoinsEarned=${this.codecoinsEarned.value}&questDescription=${this.questDescription.value}&questIsBasic=${this.questIsBasic.value}&questIsActive=${this.questIsActive.value}`;
+    console.log(data);
     updateQuest(data);
 });
 
@@ -75,6 +78,7 @@ function updateQuest(data) {
             return response.json();
         })
         .then(function (questUpdate) {
+            console.log(questUpdate);
 
         }).catch(function (error) {
 
