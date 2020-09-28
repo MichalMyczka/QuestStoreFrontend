@@ -18,21 +18,14 @@ getQuests();
 
 questListDone.onchange = function (){
     for(let i=0; i <= questList.length; i++){
-        if (i === 1){
-            document.getElementById("questName").value = questList[0]["questName"];
-            document.getElementById("codecoinsEarned").value = questList[0]["reward"];
-            document.getElementById("questDescription").value = questList[0]["description"];
-            document.getElementById("questIsBasic").value = questList[0]["isBasic"];
-            document.getElementById("questIsActive").value = questList[0]["isActive"];
-            break;
-        }
-        if (i === 2){
-            document.getElementById("questName").value = questList[1]["questName"];
-            document.getElementById("codecoinsEarned").value = questList[1]["reward"];
-            document.getElementById("questDescription").value = questList[1]["description"];
-            document.getElementById("questIsBasic").value = questList[1]["isBasic"];
-            document.getElementById("questIsActive").value = questList[1]["isActive"];
-            break;
+        // console.log((questListDone.valueOf()[i]).value);
+        // console.log(questList[i]["questName"]);
+        if (questList[i]["questName"] === (questListDone.valueOf()).value){
+            document.getElementById("questName").value = questList[i]["questName"];
+            document.getElementById("codecoinsEarned").value = questList[i]["reward"];
+            document.getElementById("questDescription").value = questList[i]["description"];
+            document.getElementById("questIsBasic").value = questList[i]["isBasic"];
+            document.getElementById("questIsActive").value = questList[i]["isActive"];
         }
     }
 };
