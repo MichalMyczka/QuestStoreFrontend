@@ -42,7 +42,14 @@
 <div class="searchBar">
     <div id="innerContent" class="formContainer">
         <form id="artifactGet-form">
-            <div id="artifactsList"></div>
+            <div class="artifactsList">
+                <div class="artifacts-list">
+                    <label>
+                        <select id="artifacts-list-inner">
+                        </select>
+                    </label>
+                </div>
+            </div>
         </form>
     </div>
 </div>
@@ -68,8 +75,8 @@
                 <label for="artifactIsSolo">
                     This Artifact Is For:
                     <select id="artifactIsSolo" name="artifactIsSolo">
-                        <option>Group</option>
-                        <option>Solo</option>
+                        <option>true</option>
+                        <option>false</option>
                     </select>
                 </label>
             </div>

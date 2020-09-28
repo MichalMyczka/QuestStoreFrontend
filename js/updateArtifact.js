@@ -1,19 +1,10 @@
 const form = document.querySelector("#artifactUpdate-form");
 let artifactList = [];
+let artifactListDone = document.getElementById('artifacts-list-inner');
 
-function artifactListHtml(){
-    document.getElementById("artifactsList").innerHTML = `
-    <div class="artifacts-list">
-        <label>
-            <select id="artifacts-list-inner">
-            </select>
-        </label>
-    </div>
-`;
-}
+
 
 function addArtifactsToList() {
-    artifactListHtml();
     let sel = document.getElementById("artifacts-list-inner");
     for (let i = 0; i <= artifactList.length; i++) {
         let opt = document.createElement('option');
@@ -24,6 +15,18 @@ function addArtifactsToList() {
 }
 
 getArtifacts();
+
+artifactListDone.onchange = function (){
+    for (let i=0; i <= artifactList.length; i++){
+        if(artifactList[i]["artifactName"] === (questListDone.valueOf()).value){
+            document.getElementById("artifactName").value = artifactList[i]["artifactName"];
+            document.getElementById("codecoinsCost").value = artifactList[i]["cost"];
+            document.getElementById("artifactDescription").value = artifactList[i]["description"];
+            document.getElementById("artifactIsSolo").value = artifactList[i]["solo"];
+            document.getElementById("artifactIsActive").value = artifactList[i]["active"];
+        }
+    }
+};
 
 form.addEventListener('submit', function (e) {
     e.preventDefault();
@@ -45,6 +48,7 @@ function getArtifacts(){
         })
         .then(function (getArtifacts) {
             artifactList = getArtifacts;
+            console.log(artifactList);
             addArtifactsToList();
 
         }).catch(function (error) {
@@ -52,8 +56,8 @@ function getArtifacts(){
         const message = document.querySelector(".message");
         message.innerHTML = error;
     });
-
     }
+
 
 function updateArtifact(data) {
     fetch("http://localhost:8000/updateArtifact",
@@ -75,7 +79,5 @@ function updateArtifact(data) {
         const message = document.querySelector(".message");
         message.innerHTML = error;
     });
-
-
 }
 
