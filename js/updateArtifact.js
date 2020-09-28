@@ -1,7 +1,7 @@
 const form = document.querySelector("#artifactUpdate-form");
 let artifactList = [];
 let artifactListDone = document.getElementById('artifacts-list-inner');
-
+let data;
 
 
 function addArtifactsToList() {
@@ -18,7 +18,8 @@ getArtifacts();
 
 artifactListDone.onchange = function (){
     for (let i=0; i <= artifactList.length; i++){
-        if(artifactList[i]["artifactName"] === (questListDone.valueOf()).value){
+        if(artifactList[i]["artifactName"] === (artifactListDone.valueOf()).value){
+            data = `artifactID=${artifactList[i]["artifactID"]}&`
             document.getElementById("artifactName").value = artifactList[i]["artifactName"];
             document.getElementById("codecoinsCost").value = artifactList[i]["cost"];
             document.getElementById("artifactDescription").value = artifactList[i]["description"];
@@ -30,7 +31,8 @@ artifactListDone.onchange = function (){
 
 form.addEventListener('submit', function (e) {
     e.preventDefault();
-    const data = `artifactName=${this.artifactName.value}&codecoinsCost=${this.codecoinsCost.value}&artifactDescription=${this.artifactDescription.value}&artifactIsSolo=${this.artifactIsSolo.value}&artifactIsActive=${this.artifactIsActive.value}`;
+    data += `artifactName=${this.artifactName.value}&codecoinsCost=${this.codecoinsCost.value}&artifactDescription=${this.artifactDescription.value}&artifactIsSolo=${this.artifactIsSolo.value}&artifactIsActive=${this.artifactIsActive.value}`;
+    console.log(data);
     updateArtifact(data);
 });
 
