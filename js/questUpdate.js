@@ -1,19 +1,10 @@
 const form = document.querySelector("#questUpdate-form");
 let questList = [];
+let questListDone = document.getElementById("quest-list-inner");
 
-function questListHtml (){
-    document.getElementById("questsList").innerHTML = `
-    <div class="quests-list">
-        <label>
-            <select id="quest-list-inner">
-            </select>
-        </label>
-    </div>
-`;
-}
+
 
 function addQuestsToList(){
-    questListHtml();
     let sel = document.getElementById("quest-list-inner");
     for(let i=0; i <= questList.length; i++){
         let opt = document.createElement('option');
@@ -24,6 +15,27 @@ function addQuestsToList(){
 }
 
 getQuests();
+
+questListDone.onchange = function (){
+    for(let i=0; i <= questList.length; i++){
+        if (i === 1){
+            document.getElementById("questName").value = questList[0]["questName"];
+            document.getElementById("codecoinsEarned").value = questList[0]["reward"];
+            document.getElementById("questDescription").value = questList[0]["description"];
+            document.getElementById("questIsBasic").value = questList[0]["isBasic"];
+            document.getElementById("questIsActive").value = questList[0]["isActive"];
+            break;
+        }
+        if (i === 2){
+            document.getElementById("questName").value = questList[1]["questName"];
+            document.getElementById("codecoinsEarned").value = questList[1]["reward"];
+            document.getElementById("questDescription").value = questList[1]["description"];
+            document.getElementById("questIsBasic").value = questList[1]["isBasic"];
+            document.getElementById("questIsActive").value = questList[1]["isActive"];
+            break;
+        }
+    }
+};
 
 form.addEventListener('submit', function (e) {
     e.preventDefault();
@@ -46,6 +58,7 @@ function getQuests(){
         .then(function (getQuests) {
 
             questList = getQuests;
+            console.log(questList);
             addQuestsToList();
 
         }).catch(function (error) {
