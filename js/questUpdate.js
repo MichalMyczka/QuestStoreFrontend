@@ -1,5 +1,4 @@
 const form = document.querySelector("#questUpdate-form");
-const form2 = document.querySelector("#questGet-form");
 let questList = [];
 
 function questListHtml (){
@@ -15,7 +14,6 @@ function questListHtml (){
 
 function addQuestsToList(){
     questListHtml();
-    console.log(questList);
     let sel = document.getElementById("quest-list-inner");
     for(let i=0; i <= questList.length; i++){
         let opt = document.createElement('option');
@@ -30,7 +28,6 @@ getQuests();
 form.addEventListener('submit', function (e) {
     e.preventDefault();
     const data = `questName=${this.questName.value}&codecoinsEarned=${this.codecoinsEarned.value}&questDescription=${this.questDescription.value}&questIsBasic=${this.questIsBasic.value}&questIsActive=${this.questIsActive.value}`;
-    console.log(data);
     updateQuest(data);
 });
 
@@ -48,7 +45,6 @@ function getQuests(){
         })
         .then(function (getQuests) {
 
-            console.log(getQuests);
             questList = getQuests;
             addQuestsToList();
 
@@ -73,9 +69,6 @@ function updateQuest(data) {
             return response.json();
         })
         .then(function (questUpdate) {
-
-            console.log(questUpdate);
-
 
         }).catch(function (error) {
 
