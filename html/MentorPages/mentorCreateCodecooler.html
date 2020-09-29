@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>MentorCreateCodecooler</title>
+    <script src="../../js/addNewCodeCooler.js" defer></script>
     <link rel="stylesheet" type="text/css" href="../../css/styles.css">
     <link rel="stylesheet" type="text/css" href="../../css/colors.css">
 </head>
@@ -41,21 +42,27 @@
 <div class="menuBackground">
     <div class="content">
         <br>
-        <h2 style="text-align: center"> Creating New Codecooler</h2>
-        <p class="innerContent"> Name:<input style="margin-left: 80px" type="text" id="name" name="name"></p>
-        <p class="innerContent">Surname:<input style="margin-left: 55px" type="text" id="surname" name="surname"></p>
-        <p class="innerContent">Address:<input style="margin-left: 71px" type="text" id="address" name="address"></p>
-        <p class="innerContent">Phone number:<input style="margin-left: 10px" type="text" id="phoneNumber" name="phoneNumber"></p>
-        <p class="innerContent">Email:<input style="margin-left: 80px" type="text" id="email" name="email"></p>
-        <p class="innerContent">Assign to class:
-            <select>
-                <option>Opcja 1</option>
-                <option>Opcja 2</option>
-                <option>Opcja 3</option>
-            </select>
-        </p>
+
+            <form id="createCodeCooler-form" class="formContainer">
+                <label for="cName">Name:</label>
+                <input type="text" id="cName" name="cName">
+                <br>
+                <label for="cSurname">Surname: </label>
+                <input type="text" id="cSurname" name="cSurname">
+                <br>
+                <label for="cPassword">Password: </label>
+                <input type="text" id="cPassword" name="cPassword">
+                <br>
+                <label for="cPhone">Phone: </label>
+                <input type="text" id="cPhone" name="cPhone">
+                <br>
+                <label for="email">Email: </label>
+                <input type="text" id="email" name="email">
+
+                <button class="button">Create</button>
+            </form>
+
         <br>
-        <button class="button" type="submit">Create Codecooler</button>
     </div>
 </div>
 
