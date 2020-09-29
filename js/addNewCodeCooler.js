@@ -3,10 +3,8 @@ const form = document.querySelector("#createCodeCooler-form");
 form.addEventListener('submit', function (e) {
     e.preventDefault();
 
-    const data = `cName=${this.cName.value}&email=${this.email.value}`;
+    const data = `cName=${this.cName.value}&cSurname=${this.cSurname.value}&email=${this.email.value}&cPassword=${this.cPassword.value}&cPhone=${this.cPhone.value}`;
 
-    //&user_Surname=${this.user_Surname.value}&email=${this.email.value}
-    //&cSurname=${this.cSurname.value}&cEmail=${this.cEmail.value}
     console.log(data);
     addUser(data);
 });
