@@ -6,13 +6,11 @@ let data;
 
 
 function addMentorsToList(){
-    console.log(mentorList);
     let sel = document.getElementById("mentors-list-inner");
     for(let i=0; i <= mentorList.length; i++){
         if (mentorList[i]["roleID"] === 2){
             let opt = document.createElement('option');
             opt.innerHTML = mentorList[i]["userName"];
-            console.log(mentorList[i]["userName"]);
             opt.value = mentorList[i]["userName"];
             sel.appendChild(opt);
         }
@@ -23,8 +21,7 @@ getMentors();
 
 mentorListDone.onchange = function (){
     for(let i=0; i <= mentorList.length; i++){
-        // console.log((questListDone.valueOf()[i]).value);
-        // console.log(questList[i]["questName"]);
+
         if (mentorList[i]["userName"] === (mentorListDone.valueOf()).value){
             data = `mID=${mentorList[i]["userID"]}&`
             document.getElementById("mName").value = mentorList[i]["userName"];
@@ -41,7 +38,6 @@ mentorListDone.onchange = function (){
 form.addEventListener('submit', function (e) {
     e.preventDefault();
     data += `mName=${this.mName.value}&mSurname=${this.mSurname.value}&mEmail=${this.mEmail.value}&mPhone=${this.mPhone.value}&mPassword=${this.mPassword.value}&mClass=${this.mClass.value}&mIsActive=${this.mIsActive.value}`;
-    console.log(data);
     updateMentor(data);
 });
 
@@ -58,11 +54,8 @@ function getMentors(){
             return response.json();
         })
         .then(function (getMentors) {
-            // if (getMentors["Role_ID"] === 2){
                 mentorList = getMentors;
-                console.log(mentorList);
                 addMentorsToList();
-            // }
 
         }).catch(function (error) {
 
@@ -85,7 +78,6 @@ function updateMentor(data) {
             return response.json();
         })
         .then(function (mentorUpdate) {
-            console.log(mentorUpdate);
 
         }).catch(function (error) {
 

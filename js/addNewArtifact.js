@@ -2,8 +2,7 @@ const form = document.querySelector("#newArtifact-form");
 
 form.addEventListener('submit', function (e) {
     e.preventDefault();
-    const data = `artifactName=${this.artifactName.value}&codecoinsCost=${this.codecoinsCost.value}&artifactDescription=${this.artifactDescription.value}`;
-    console.log(data);
+    const data = `artifactName=${this.artifactName.value}&codecoinsCost=${this.codecoinsCost.value}&artifactDescription=${this.artifactDescription.value}&artifactIsSolo=${this.artifactIsSolo.value}`;
     addArtifact(data);
 });
 
@@ -21,8 +20,7 @@ function addArtifact(data) {
             return response.json();
         })
         .then(function (artifact) {
-            // user is authenticated, and cookie send by server is set in browser
-            console.log(artifact);
+
         })
 
         .catch(function (error) {

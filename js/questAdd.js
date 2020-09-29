@@ -4,7 +4,6 @@ const form = document.querySelector("#questAdd-form");
 form.addEventListener('submit', function (e) {
     e.preventDefault();
     const data = `questName=${this.questName.value}&codecoinsEarned=${this.codecoinsEarned.value}&questIsActive=${this.questIsActive}&questDescription=${this.questDescription.value}&questIsBasic=${this.questIsBasic}`;
-    console.log(data);
     addQuest(data);
 });
 
@@ -22,9 +21,6 @@ function addQuest(data) {
             return response.json();
         })
         .then(function (questAdd) {
-
-            console.log(questAdd);
-
 
         }).catch(function (error) {
 

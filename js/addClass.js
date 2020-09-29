@@ -4,7 +4,6 @@ const form = document.querySelector("#classAdd-form");
 form.addEventListener('submit', function (e) {
     e.preventDefault();
     const data = `className=${this.className.value}`;
-    console.log(data);
     addClass(data);
 });
 
@@ -22,9 +21,6 @@ function addClass(data) {
             return response.json();
         })
         .then(function (classAdd) {
-
-            console.log(classAdd);
-
 
         }).catch(function (error) {
 

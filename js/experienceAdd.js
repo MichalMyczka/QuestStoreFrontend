@@ -4,7 +4,6 @@ const form = document.querySelector("#experienceAdd-form");
 form.addEventListener('submit', function (e) {
     e.preventDefault();
     const data = `levelTitle=${this.levelTitle.value}&codepointAmount=${this.codepointAmount.value}`;
-    console.log(data);
     addExperience(data);
 });
 
@@ -22,9 +21,6 @@ function addExperience(data) {
             return response.json();
         })
         .then(function (experienceAdd) {
-
-            console.log(experienceAdd);
-
 
         }).catch(function (error) {
 

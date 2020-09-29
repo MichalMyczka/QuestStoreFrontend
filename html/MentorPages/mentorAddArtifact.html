@@ -54,12 +54,16 @@
                 <label for="artifactDescription">Artifact Description:</label>
                 <textarea id="artifactDescription" name="artifactDescription" rows="4" cols="50"></textarea>
             </div>
-            <p class="innerContent">This Artifact Is:
-                <select>
-                    <option>Group</option>
-                    <option>Solo</option>
-                </select>
-            </p>
+            artifactIsSolo
+            <div class="innerContent">
+                <label for="artifactIsSolo">
+                    Is Artifact Solo?:
+                    <select id="artifactIsSolo" name="artifactIsSolo">
+                        <option>true</option>
+                        <option>false</option>
+                    </select>
+                </label>
+            </div>
             <button class="button" id="sub">Add Artifact</button>
         </form>
     </div>

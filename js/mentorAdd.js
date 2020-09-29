@@ -4,7 +4,6 @@ const form = document.querySelector("#mentorAdd-form");
 form.addEventListener('submit', function (e) {
     e.preventDefault();
     const data = `mName=${this.mName.value}&mSurname=${this.mSurname.value}&mEmail=${this.mEmail.value}&mPhone=${this.mPhone.value}&mPassword=${this.mPassword.value}&mClass=${this.mClass.value}`;
-    console.log(data);
     addMentor(data);
 });
 
@@ -22,9 +21,6 @@ function addMentor(data) {
             return response.json();
         })
         .then(function (mentorAdd) {
-
-            console.log(mentorAdd);
-
 
         }).catch(function (error) {
 

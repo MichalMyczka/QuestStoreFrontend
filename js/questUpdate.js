@@ -19,8 +19,7 @@ getQuests();
 
 questListDone.onchange = function (){
     for(let i=0; i <= questList.length; i++){
-        // console.log((questListDone.valueOf()[i]).value);
-        // console.log(questList[i]["questName"]);
+
         if (questList[i]["questName"] === (questListDone.valueOf()).value){
             data = `questID=${questList[i]["questID"]}&`
             document.getElementById("questName").value = questList[i]["questName"];
@@ -35,7 +34,6 @@ questListDone.onchange = function (){
 form.addEventListener('submit', function (e) {
     e.preventDefault();
     data += `questName=${this.questName.value}&codecoinsEarned=${this.codecoinsEarned.value}&questDescription=${this.questDescription.value}&questIsBasic=${this.questIsBasic.value}&questIsActive=${this.questIsActive.value}`;
-    console.log(data);
     updateQuest(data);
 });
 
@@ -54,7 +52,6 @@ function getQuests(){
         .then(function (getQuests) {
 
             questList = getQuests;
-            console.log(questList);
             addQuestsToList();
 
         }).catch(function (error) {
@@ -78,7 +75,6 @@ function updateQuest(data) {
             return response.json();
         })
         .then(function (questUpdate) {
-            console.log(questUpdate);
 
         }).catch(function (error) {
 
