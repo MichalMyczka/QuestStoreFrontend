@@ -2,7 +2,7 @@ const form = document.querySelector("#newArtifact-form");
 
 form.addEventListener('submit', function (e) {
     e.preventDefault();
-    const data = `artifactName=${this.artifactName.value}&codecoinsCost=${this.codecoinsCost.value}&artifactDescription=${this.artifactDescription.value}&artifactIsSolo=${this.artifactIsSolo.value}`;
+    const data = `artifactName=${this.artifactName.value}&codecoinsCost=${this.codecoinsCost.value}&artifactDescription=${this.artifactDescription.value}&artifactIsSolo=${this.artifactIsSolo.value}&artifactIsActive=${this.artifactIsActive.value}`;
     addArtifact(data);
 });
 
