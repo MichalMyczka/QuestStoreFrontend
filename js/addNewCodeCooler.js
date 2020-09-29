@@ -3,14 +3,10 @@ const form = document.querySelector("#createCodeCooler-form");
 form.addEventListener('submit', function (e) {
     e.preventDefault();
 
-    // const data = `user_Name=${this.user_Name.value}
-    // &user_Surname=${this.user_Surname.value}
-    // &codeCoolerAdress=${this.codeCoolerAdress.value}
-    // &email=${this.email.value}`;
+    const data = `cName=${this.cName.value}&email=${this.email.value}`;
 
-    const data = `email=${this.email.value}`;
-
-
+    //&user_Surname=${this.user_Surname.value}&email=${this.email.value}
+    //&cSurname=${this.cSurname.value}&cEmail=${this.cEmail.value}
     console.log(data);
     addUser(data);
 });
@@ -29,7 +25,6 @@ function addUser(data) {
             return response.json();
         })
         .then(function (user) {
-            // user is authenticated, and cookie send by server is set in browser
             console.log(user);
         })
 
