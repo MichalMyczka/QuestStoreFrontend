@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>MentorAddArtifact</title>
+    <script src="../../js/addNewArtifact.js" defer></script>
     <link rel="stylesheet" type="text/css" href="../../css/styles.css">
     <link rel="stylesheet" type="text/css" href="../../css/colors.css">
 </head>
@@ -25,7 +26,6 @@
         <a href="mentorAddArtifact.html" class="button">Add A New Artifact</a>
         <a href="mentorUpdateQuest.html" class="button">Update Quest Details</a>
         <a href="mentorUpdateArtifact.html" class="button">Update Artifact Details</a>
-        <a href="mentorSplitArtifacts.html" class="button">Split Artifacts Into Categories</a>
         <a href="mentorCreateCodecooler.html" class="button">Create Codecooler Account</a>
         <a href="mentorMarkQuest.html" class="button">Mark Quest As Done</a>
         <a href="mentorMarkArtifacts.html" class="button">Mark Artifacts As Done</a>
@@ -41,9 +41,9 @@
 <div class="menuBackground">
     <div class="content">
         <h2 style="text-align: center"> Creating New Artifact</h2>
-        <form action="mentorStartingPage.html" class="formContainer">
+        <form id="newArtifact-form" class="formContainer">
             <div class="innerContent">
-                <label for="artifactName">Type Artifact Title:</label>
+                <label for="artifactName">Type Artifact Name:</label>
                 <input type="text" id="artifactName" name="artifactName">
             </div>
             <div class="innerContent">
@@ -52,16 +52,27 @@
             </div>
             <div class="innerContent">
                 <label for="artifactDescription">Artifact Description:</label>
-                <textarea id="artifactDescription" name="artifactDescription" rows="4" cols="50">
-                </textarea>
+                <textarea id="artifactDescription" name="artifactDescription" rows="4" cols="50"></textarea>
             </div>
-            <p class="innerContent">This Artifact Is For:
-                <select>
-                    <option>Group</option>
-                    <option>Solo</option>
-                </select>
-            </p>
-            <button class="button" type="submit">Add Artifact</button>
+            <div class="innerContent">
+                <label for="artifactIsActive">
+                    Is Artifact Active?:
+                    <select id="artifactIsActive" name="artifactIsActive">
+                        <option>true</option>
+                        <option>false</option>
+                    </select>
+                </label>
+            </div>
+            <div class="innerContent">
+                <label for="artifactIsSolo">
+                    Is Artifact Solo?:
+                    <select id="artifactIsSolo" name="artifactIsSolo">
+                        <option>true</option>
+                        <option>false</option>
+                    </select>
+                </label>
+            </div>
+            <button class="button" id="sub">Add Artifact</button>
         </form>
     </div>
 </div>

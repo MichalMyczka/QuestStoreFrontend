@@ -4,7 +4,6 @@ const form = document.querySelector("#login-form");
 form.addEventListener('submit', function (e) {
     e.preventDefault();
     const data = `email=${this.email.value}&password=${this.password.value}`;
-    console.log(data);
     login(data);
 });
 
@@ -22,9 +21,8 @@ function login(data) {
             return response.json();
         })
         .then(function (user) {
-            // user is authenticated, and cookie send by server is set in browser
-            console.log(user);
-            switch (user.role_ID) {
+
+            switch (user.roleID) {
                 case 3:
                     window.location.href = "CreepPages/creepStartingPage.html";
                     break;
@@ -35,12 +33,9 @@ function login(data) {
                     window.location.href = "CodecoolerPages/codecoolerStartingPage.html"
                     break;
             }
-            // if(user.role_ID ===3) {
-            //     window.location.href = "CreepPages/creepStartingPage.html";
-            // }
 
         }).catch(function (error) {
-        // user NOT authenticated, server return different status than 200-299
+
             const message = document.querySelector(".message");
             message.innerHTML = error;
     });

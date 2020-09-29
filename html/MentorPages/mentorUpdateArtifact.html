@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>MentorUpdateArtifact</title>
+    <script src="../../js/updateArtifact.js" defer></script>
     <link rel="stylesheet" type="text/css" href="../../css/styles.css">
     <link rel="stylesheet" type="text/css" href="../../css/colors.css">
 </head>
@@ -25,7 +26,6 @@
         <a href="mentorAddArtifact.html" class="button">Add A New Artifact</a>
         <a href="mentorUpdateQuest.html" class="button">Update Quest Details</a>
         <a href="mentorUpdateArtifact.html" class="button">Update Artifact Details</a>
-        <a href="mentorSplitArtifacts.html" class="button">Split Artifacts Into Categories</a>
         <a href="mentorCreateCodecooler.html" class="button">Create Codecooler Account</a>
         <a href="mentorMarkQuest.html" class="button">Mark Quest As Done</a>
         <a href="mentorMarkArtifacts.html" class="button">Mark Artifacts As Done</a>
@@ -39,16 +39,24 @@
 </div>
 
 <div class="searchBar">
-    <div class="innerContent">
-        <label for="csearch">Search Artifact:</label>
-        <input type="text" id="csearch" name="csearch">
+    <div id="innerContent" class="formContainer">
+        <form id="artifactGet-form">
+            <div class="artifactsList">
+                <div class="artifacts-list">
+                    <label>
+                        <select id="artifacts-list-inner">
+                        </select>
+                    </label>
+                </div>
+            </div>
+        </form>
     </div>
 </div>
 
 <div class="menuBackground">
     <div class="content">
         <h2 style="text-align: center"> Updating Artifact Info</h2>
-        <form action="mentorStartingPage.html" class="formContainer">
+        <form id="artifactUpdate-form" class="formContainer">
             <div class="innerContent">
                 <label for="artifactName">Artifact Title:</label>
                 <input type="text" id="artifactName" name="artifactName">
@@ -59,16 +67,28 @@
             </div>
             <div class="innerContent">
                 <label for="artifactDescription">Artifact Description:</label>
-                <textarea id="artifactDescription" name="artifactDescription" rows="4" cols="50">
+                <textarea id="artifactDescription" name="artifactDescription" placeholder = "value" rows="4" cols="50">
                 </textarea>
             </div>
-            <p class="innerContent">This Artifact Is For:
-                <select>
-                    <option>Group</option>
-                    <option>Solo</option>
-                </select>
-            </p>
-            <button class="button" type="submit">Update Artifact</button>
+            <div class="innerContent">
+                <label for="artifactIsSolo">
+                    This Artifact Is For:
+                    <select id="artifactIsSolo" name="artifactIsSolo">
+                        <option>true</option>
+                        <option>false</option>
+                    </select>
+                </label>
+            </div>
+            <div class="innerContent">
+                <label for="artifactIsActive">
+                    Is Artifact Active:
+                    <select id="artifactIsActive" name="artifactIsActive">
+                        <option>true</option>
+                        <option>false</option>
+                    </select>
+                </label>
+            </div>
+            <button class="button" id="sub">Update Artifact</button>
         </form>
     </div>
 </div>

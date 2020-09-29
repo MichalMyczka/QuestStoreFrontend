@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>MentorAddQuest</title>
+    <script src="../../js/questAdd.js" defer></script>
     <link rel="stylesheet" type="text/css" href="../../css/styles.css">
     <link rel="stylesheet" type="text/css" href="../../css/colors.css">
 </head>
@@ -25,7 +26,6 @@
         <a href="mentorAddArtifact.html" class="button">Add A New Artifact</a>
         <a href="mentorUpdateQuest.html" class="button">Update Quest Details</a>
         <a href="mentorUpdateArtifact.html" class="button">Update Artifact Details</a>
-        <a href="mentorSplitArtifacts.html" class="button">Split Quest Into Categories</a>
         <a href="mentorCreateCodecooler.html" class="button">Create Codecooler Account</a>
         <a href="mentorMarkQuest.html" class="button">Mark Quest As Done</a>
         <a href="mentorMarkArtifacts.html" class="button">Mark Artifacts As Done</a>
@@ -41,7 +41,7 @@
 <div class="menuBackground">
     <div class="content">
         <h2 style="text-align: center"> Creating New Quest</h2>
-        <form action="mentorStartingPage.html" class="formContainer">
+        <form id="questAdd-form" class="formContainer">
             <div class="innerContent">
                 <label for="questName">Type Quest Title:</label>
                 <input type="text" id="questName" name="questName">
@@ -52,16 +52,27 @@
             </div>
             <div class="innerContent">
                 <label for="questDescription">Quest Description:</label>
-                <textarea id="questDescription" name="questDescription" rows="4" cols="50">
-                </textarea>
+                <textarea id="questDescription" name="questDescription" rows="4" cols="50"></textarea>
             </div>
-            <p class="innerContent">Is Quest Available:
-                <select>
-                    <option>Yes</option>
-                    <option>No</option>
-                </select>
-            </p>
-            <button class="button" type="submit">Add Quest</button>
+            <div class="innerContent">
+                <label for="questIsBasic">
+                    Is Quest Basic:
+                    <select id="questIsBasic" name="questIsBasic">
+                        <option>true</option>
+                        <option>false</option>
+                    </select>
+                </label>
+            </div>
+            <div class="innerContent">
+                <label for="questIsActive">
+                    Is Quest Active:
+                    <select id="questIsActive" name="questIsActive">
+                        <option>true</option>
+                        <option>false</option>
+                    </select>
+                </label>
+            </div>
+            <button class="button" id="sub">Add Quest</button>
         </form>
     </div>
 </div>

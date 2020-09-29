@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>CreepEditMentor</title>
+    <script src="../../js/mentorUpdate.js" defer></script>
     <link rel="stylesheet" type="text/css" href="../../css/styles.css">
     <link rel="stylesheet" type="text/css" href="../../css/colors.css">
 </head>
@@ -35,44 +36,63 @@
 </div>
 
 <div class="searchBar">
-    <div class="innerContent">
-        <label for="msearch">Search Mentor:</label>
-        <input type="text" id="msearch" name="msearch">
+    <div id="innerContent" class="formContainer">
+        <form id="mentorGet-form">
+            <div class="mentorsList">
+                <div class="mentors-list">
+                    <label>
+                        <select id="mentors-list-inner">
+                        </select>
+                    </label>
+                </div>
+            </div>
+        </form>
     </div>
 </div>
-
 <div class="menuBackground">
     <div class="content">
-        <h2 style="text-align: center"> Creating New Mentor</h2>
-        <form action="creepStartingPage.html" class="formContainer">
+        <h2 style="text-align: center"> Editing Mentor</h2>
+        <form id="mentorUpdate-form" class="formContainer">
             <div class="innerContent">
-                <label for="mname">Name:</label>
-                <input type="text" id="mname" name="mname">
+                <label for="mName">Name:</label>
+                <input type="text" id="mName" name="mName">
             </div>
             <div class="innerContent">
-                <label for="msurname">Surname:</label>
-                <input type="text" id="msurname" name="msurname">
+                <label for="mSurname">Surname:</label>
+                <input type="text" id="mSurname" name="mSurname">
             </div>
             <div class="innerContent">
-                <label for="maddress">Address:</label>
-                <input type="text" id="maddress" name="maddress">
+                <label for="mEmail">Email:</label>
+                <input type="text" id="mEmail" name="mEmail">
             </div>
             <div class="innerContent">
-                <label for="mphone">Phone number:</label>
-                <input type="text" id="mphone" name="mphone">
+                <label for="mPhone">Phone number:</label>
+                <input type="text" id="mPhone" name="mPhone">
             </div>
             <div class="innerContent">
-                <label for="memail">Email:</label>
-                <input type="text" id="memail" name="memail">
+                <label for="mPassword">Password:</label>
+                <input type="text" id="mPassword" name="mPassword">
             </div>
-            <p class="innerContent">Assign to class:
-                <select>
-                    <option>Opcja 1</option>
-                    <option>Opcja 2</option>
-                    <option>Opcja 3</option>
-                </select>
-            </p>
-            <button class="button" type="submit">Update Mentor Profile</button>
+            <div class="innerContent">
+                <label for="mClass">
+                    Assign To Class:
+                    <select id="mClass" name="mClass">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>
+                </label>
+            </div>
+            <div class="innerContent">
+                <label for="mIsActive">
+                    Is Mentor Active:
+                    <select id="mIsActive" name="mIsActive">
+                        <option>true</option>
+                        <option>false</option>
+                    </select>
+                </label>
+            </div>
+            <button class="button" id="sub">Create Mentor Profile</button>
         </form>
     </div>
 </div>
