@@ -44,10 +44,11 @@ body{
     background: var(--menuBackgroundColor);
     margin-left: 31.5%;
     text-align: left;
-    width: 30%;
+    width: 20%;
     height: 4%;
     padding-bottom: 0.001em;
     padding-top: 0.001em;
+    border-radius: 20px;
 }
 .menuBackground{
     background: var(--menuBackgroundColor);
