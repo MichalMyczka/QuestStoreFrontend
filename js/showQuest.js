@@ -1,22 +1,44 @@
 let questList = [];
 
-function questTile() {
-    document.getElementById("tile1").innerHTML = `
-        <div class="tile" id="tile1">
-        <h3></h3>
-        <p>salary: 0cc</p>
-        <button class="assignmentButton" type="button">Accept assignment</button>
-    </div>
-    `;
-}
 
-function addQuestsToList(){
-    let sel = document.getElementById("quest-list-inner");
-    for(let i=0; i <= questList.length; i++){
-        let opt = document.createElement('option');
-        opt.innerHTML = questList[i]["questName"];
-        opt.value = questList[i]["questName"];
-        sel.appendChild(opt);
+
+function questTile() {
+    for (let i=0; i <= questList.length; i++){
+
+        let sel = document.getElementById("test");
+        let questName =  questList[i]["questName"];
+        let reward = "Reward: " + questList[i]["reward"];
+        let isBasic;
+
+        if(questList[i]["isBasic"] === true){
+            isBasic = "available"
+        }
+        else{
+            isBasic = "not Available"
+        }
+
+        let div = document.createElement("div");
+        div.classList.add("tile");
+        let h3 = document.createElement("h3");
+        h3.classList.add("tileName");
+        h3.innerHTML = questName;
+        let p1 = document.createElement("p");
+        p1.classList.add("tileReward");
+        p1.innerHTML = reward;
+        let p2 = document.createElement("p");
+        p2.classList.add("tileIsBasic");
+        p2.innerHTML = isBasic;
+        let button = document.createElement("button");
+        button.classList.add("assignmentButton");
+        button.type = "button";
+        button.innerText = "Accept assignment";
+
+        div.appendChild(h3);
+        div.appendChild(p1);
+        div.appendChild(p2);
+        div.appendChild(button);
+        sel.appendChild(div);
+
     }
 }
 
@@ -36,7 +58,7 @@ function getQuests(){
 
             questList = getQuests;
             console.log(questList);
-            addQuestsToList();
+            questTile();
 
         }).catch(function (error) {
 
@@ -44,5 +66,5 @@ function getQuests(){
         message.innerHTML = error;
     });
 }
-questTile();
+
 getQuests();
