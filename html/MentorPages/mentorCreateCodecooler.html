@@ -15,8 +15,8 @@
     <div class="loggedAs">
         <div class="loggedCentered">
             <p>You Are Currently Logged As:</p>
-            <img style="border-radius: 50%" src="../../images/poteznyGej.jpeg" alt="creepimage" width="60" height="60">
-            <p style="float: left">Mentor</p>
+            <img style="border-radius: 50%" src="../../images/mentor.jpg" alt="mentorImage" width="60" height="60">
+            <p>Mentor</p>
             <p style="clear: both"></p>
         </div>
     </div>
@@ -33,7 +33,6 @@
     </div>
 </div>
 
-
 <div class="logo">
     <h1 class="upperLogo"> <img src="../../images/books.png" alt="bookImage" width="60" height="60"> QUEST <br> </h1>
     <h1 class="bottomLogo">STORE </h1>
@@ -41,30 +40,43 @@
 
 <div class="menuBackground">
     <div class="content">
-        <br>
-
-            <form id="createCodeCooler-form" class="formContainer">
+        <h2 style="text-align: center"> Creating New Codecooler</h2>
+        <form id="createCodeCooler-form" class="formContainer">
+            <div class="innerContent">
                 <label for="cName">Name:</label>
                 <input type="text" id="cName" name="cName">
-                <br>
-                <label for="cSurname">Surname: </label>
+            </div>
+            <div class="innerContent">
+                <label for="cSurname">Surname:</label>
                 <input type="text" id="cSurname" name="cSurname">
-                <br>
-                <label for="cPassword">Password: </label>
+            </div>
+            <div class="innerContent">
+                <label for="cPassword">Email:</label>
                 <input type="text" id="cPassword" name="cPassword">
-                <br>
-                <label for="cPhone">Phone: </label>
+            </div>
+            <div class="innerContent">
+                <label for="cPhone">Phone number:</label>
                 <input type="text" id="cPhone" name="cPhone">
-                <br>
-                <label for="email">Email: </label>
+            </div>
+            <div class="innerContent">
+                <label for="email">Password:</label>
                 <input type="text" id="email" name="email">
-
-                <button class="button">Create</button>
-            </form>
-
-        <br>
+            </div>
+            <div class="innerContent">
+                <label for="cClass">
+                    Assign To Class:
+                    <select id="cClass" name="cClass">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>
+                </label>
+            </div>
+            <button class="button" id="sub">Create Codecooler Profile</button>
+        </form>
     </div>
 </div>
+
 
 </body>
 </html>

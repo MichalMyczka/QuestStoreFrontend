@@ -2,10 +2,7 @@ const form = document.querySelector("#createCodeCooler-form");
 
 form.addEventListener('submit', function (e) {
     e.preventDefault();
-
-    const data = `cName=${this.cName.value}&cSurname=${this.cSurname.value}&email=${this.email.value}&cPassword=${this.cPassword.value}&cPhone=${this.cPhone.value}`;
-
-    console.log(data);
+    const data = `cName=${this.cName.value}&cSurname=${this.cSurname.value}&email=${this.email.value}&cPassword=${this.cPassword.value}&cPhone=${this.cPhone.value}&cClass=${this.cClass.value}`;
     addUser(data);
 });
 
@@ -23,7 +20,7 @@ function addUser(data) {
             return response.json();
         })
         .then(function (user) {
-            console.log(user);
+
         })
 
         .catch(function (error) {

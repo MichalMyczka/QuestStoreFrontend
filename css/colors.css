@@ -6,7 +6,7 @@
     --logoutButtonColor: #cb3232;
     --textColor: black;
     --logoColor: #F2994A;
-    --loggedAsTextColor: #293AD3;
+    --loggedAsTextColor: #816b08;
     --gradientButton: linear-gradient(130deg, rgba(2,0,36,1) 0%, rgba(45,145,166,0.9836309523809523) 55%, rgba(9,9,121,1) 100%);
     --gradientLogout: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(198,52,52,1) 100%, rgba(0,212,255,1) 100%);
 }
