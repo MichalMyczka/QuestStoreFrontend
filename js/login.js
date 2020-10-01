@@ -21,7 +21,7 @@ function login(data) {
         })
         .then(function (user) {
             let userID = user.userID;
-            // alert("zalogowany user o ID nr: " + userID);
+            // alert("zalogowany user o ID nr: " + userID);aaaa
             localStorage.setItem("loggedUserID", userID);
             switch (user.roleID) {
                 case 3:

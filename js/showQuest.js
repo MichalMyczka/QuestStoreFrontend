@@ -103,7 +103,7 @@ function activateQuest(data) {
             }
             return response.json();
         })
-        .then(function (showQuest) {   //TODO wyjasnic to response
+        .then(function (showQuest) {   //TODO wyjasnic to responsea
 
         }).catch(function (error) {
 
