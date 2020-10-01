@@ -1,21 +1,24 @@
 let artifactList = [];
-let artifactSoloList = [];
+let artifactGroupList = [];
 let imageList = ["../../images/pizza.jpg","../../images/cosplay.jpg","../../images/plener.jpg"]
 let iteration = 0;
+let data;
 
 
 function soloArtifactTile() {
 
     for (let i=0; i <= artifactList.length; i++){
         if(artifactList[i]["solo"] === false){
-            artifactSoloList = artifactList[i];
+            artifactGroupList = artifactList[i];
             let sel = document.getElementById("groupArtifacts");
 
-            let artifactName =  artifactSoloList["artifactName"];
-            let cost = "Cost: " + artifactSoloList["cost"];
-            let description = artifactSoloList["description"];
+            let artifactName =  artifactGroupList["artifactName"];
+            let cost = "Cost: " + artifactGroupList["cost"];
+            let description = artifactGroupList["description"];
 
-            let isActive = artifactSoloList["active"];
+            let isActive = artifactGroupList["active"];
+
+            let artifactID = artifactGroupList["artifactID"]
 
             let div = document.createElement("div");
             div.classList.add("square");
@@ -40,6 +43,10 @@ function soloArtifactTile() {
             button.classList.add("assignmentButton");
             button.type = "button";
             button.innerText = "Donate To Artifact";
+            button.onclick = function () {
+                data = `artifactID=${artifactID}`
+                activateGroupArtifact(data);
+            }
 
             let notAvailable = document.createElement("p");
             notAvailable.innerHTML = "Not Available";
@@ -77,6 +84,28 @@ function getArtifacts(){
             artifactList = getArtifacts;
             console.log(artifactList);
             soloArtifactTile();
+
+        }).catch(function (error) {
+
+        const message = document.querySelector(".message");
+        message.innerHTML = error;
+    });
+}
+
+function activateGroupArtifact(data) {
+    fetch("http://localhost:8000/codecoolerActivateGroupArtifacts",
+        {
+            credentials: 'same-origin',
+            method: "POST",
+            body: data
+        })
+        .then(function (response) {
+            if (!response.ok) {
+                throw Error(response.statusText);
+            }
+            return response.json();
+        })
+        .then(function (activateQuest) {
 
         }).catch(function (error) {
 

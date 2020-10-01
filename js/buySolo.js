@@ -2,6 +2,8 @@ let artifactList = [];
 let artifactSoloList = [];
 let imageList = ["../../images/beer.jpg","../../images/mentorHelp.jpg","../../images/webinar.jpg","../../images/coding.jpg","../../images/gaming.jpg","../../images/coffee.jpg"]
 let iteration = 0;
+let userID = localStorage.getItem("loggedUserID");
+let data = `userID=${userID}&`;
 
 function soloArtifactTile() {
 
@@ -13,6 +15,8 @@ function soloArtifactTile() {
         let artifactName =  artifactSoloList["artifactName"];
         let cost = "Cost: " + artifactSoloList["cost"];
         let description = artifactSoloList["description"];
+
+        let artifactID = artifactSoloList["artifactID"];
 
         let isActive = artifactSoloList["active"];
 
@@ -39,6 +43,11 @@ function soloArtifactTile() {
         button.classList.add("assignmentButton");
         button.type = "button";
         button.innerText = "Buy Artifact";
+        button.onclick = function () {
+            data += `artifactID=${artifactID}`
+            activateSoloArtifact(data);
+            data = `userID=${userID}&`;
+        }
 
         let notAvailable = document.createElement("p");
         notAvailable.innerHTML = "Not Available";
@@ -77,6 +86,28 @@ function getArtifacts(){
             artifactList = getArtifacts;
             console.log(artifactList);
             soloArtifactTile();
+
+        }).catch(function (error) {
+
+        const message = document.querySelector(".message");
+        message.innerHTML = error;
+    });
+}
+
+function activateSoloArtifact(data) {
+    fetch("http://localhost:8000/codecoolerActivateSoloArtifacts",
+        {
+            credentials: 'same-origin',
+            method: "POST",
+            body: data
+        })
+        .then(function (response) {
+            if (!response.ok) {
+                throw Error(response.statusText);
+            }
+            return response.json();
+        })
+        .then(function (activateQuest) {
 
         }).catch(function (error) {
 
