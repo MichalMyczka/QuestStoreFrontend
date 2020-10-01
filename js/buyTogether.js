@@ -61,7 +61,6 @@ function soloArtifactTile() {
     }
 }
 
-
 function getArtifacts(){
     fetch("http://localhost:8000/updateArtifact",
         {

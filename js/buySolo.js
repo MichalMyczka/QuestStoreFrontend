@@ -3,7 +3,6 @@ let artifactSoloList = [];
 let imageList = ["../../images/beer.jpg","../../images/mentorHelp.jpg","../../images/webinar.jpg","../../images/coding.jpg","../../images/gaming.jpg","../../images/coffee.jpg"]
 let iteration = 0;
 
-
 function soloArtifactTile() {
 
     for (let i=0; i <= artifactList.length; i++){

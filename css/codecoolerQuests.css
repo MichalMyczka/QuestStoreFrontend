@@ -29,13 +29,11 @@
     border-radius: 1em;
     background: var(--menuBackgroundColor);
 }
-
 .returnToMainSiteButtonContainer{
     float: right;
     margin-top: 1.8%;
     margin-right: 5%;
 }
-
 .goToMainSite{;
     border-radius: 60px;
     background: var(--menuBackgroundColor);
