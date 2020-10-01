@@ -1,7 +1,5 @@
 let questList = [];
 
-
-
 function questTile() {
     for (let i=0; i <= questList.length; i++){
 
