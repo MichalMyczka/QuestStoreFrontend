@@ -1,6 +1,6 @@
 let questList = [];
-let newActiveQuest = [];
 let userID = localStorage.getItem("loggedUserID");
+let data = `userID=${userID}&`;
 
 
 function questTile() {
@@ -9,6 +9,9 @@ function questTile() {
         let sel = document.getElementById("tiles");
 
         let questID = questList[i]["questID"];
+
+
+
         let questName =  questList[i]["questName"];
         let reward = "Reward: " + questList[i]["reward"];
         let isBasic = questList[i]["isBasic"];
@@ -41,10 +44,9 @@ function questTile() {
         button.type = "button";
         button.innerText = "Accept assignment";
         button.onclick = function () {
-            newActiveQuest = [userID, questID];
-            activateQuest(newActiveQuest);
-            // console.log(newActiveQuest);
-            // console.log("zalogowany user o id: " + userID);
+            data += `questID=${questID}`
+            activateQuest(data);
+            data = `userID=${userID}&`;
         }
 
 
@@ -66,7 +68,7 @@ function questTile() {
 }
 
 function getQuests(){
-    fetch("http://localhost:8000/codecoolerQuests",
+    fetch("http://localhost:8000/codecoolerShowQuests",
         {
             credentials: 'same-origin',
             method: "GET",
@@ -91,7 +93,7 @@ function getQuests(){
 }
 
 function activateQuest(data) {
-    fetch("http://localhost:8000/codecoolerQuests",
+    fetch("http://localhost:8000/codecoolerAddQuests",
         {
             credentials: 'same-origin',
             method: "POST",
@@ -103,7 +105,7 @@ function activateQuest(data) {
             }
             return response.json();
         })
-        .then(function (showQuest) {   //TODO wyjasnic to responsea
+        .then(function (activateQuest) {   //TODO wyjasnic to responsea
 
         }).catch(function (error) {
 
