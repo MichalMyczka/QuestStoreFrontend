@@ -191,6 +191,8 @@ h2{
     background: var(--menuBackgroundColor);
     border-radius: 10px;
     margin-left: 13%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 .infoContainer{
     background: var(--menuBackgroundColor);
@@ -250,4 +252,23 @@ h2{
 }
 #exp {
 
+}
+.square{
+    text-align: center;
+}
+.assignmentButton{
+    background: var(--logoColor);
+    color: var(--buttonBackgroundColor);
+    border: none;
+    border-radius: 25px;
+    margin-left: 5%;
+    margin-top: 17%;
+    padding: 6%;
+    align-items: center;
+    float: bottom;
+    text-align: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 60%;
+    line-height: 100%;
 }
