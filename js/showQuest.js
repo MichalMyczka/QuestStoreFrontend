@@ -1,10 +1,14 @@
 let questList = [];
+let newActiveQuest = [];
+let userID = localStorage.getItem("loggedUserID");
+
 
 function questTile() {
     for (let i=0; i <= questList.length; i++){
 
         let sel = document.getElementById("tiles");
 
+        let questID = questList[i]["questID"];
         let questName =  questList[i]["questName"];
         let reward = "Reward: " + questList[i]["reward"];
         let isBasic = questList[i]["isBasic"];
@@ -36,6 +40,13 @@ function questTile() {
         button.classList.add("assignmentButton");
         button.type = "button";
         button.innerText = "Accept assignment";
+        button.onclick = function () {
+            newActiveQuest = [userID, questID];
+            activateQuest(newActiveQuest);
+            // console.log(newActiveQuest);
+            // console.log("zalogowany user o id: " + userID);
+        }
+
 
         let notAvailable = document.createElement("p");
         notAvailable.innerHTML = "Not Available";
@@ -71,6 +82,28 @@ function getQuests(){
             questList = getQuests;
             console.log(questList);
             questTile();
+
+        }).catch(function (error) {
+
+        const message = document.querySelector(".message");
+        message.innerHTML = error;
+    });
+}
+
+function activateQuest(data) {
+    fetch("http://localhost:8000/codecoolerQuests",
+        {
+            credentials: 'same-origin',
+            method: "POST",
+            body: data
+        })
+        .then(function (response) {
+            if (!response.ok) {
+                throw Error(response.statusText);
+            }
+            return response.json();
+        })
+        .then(function (showQuest) {   //TODO wyjasnic to response
 
         }).catch(function (error) {
 

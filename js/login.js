@@ -1,4 +1,3 @@
-
 const form = document.querySelector("#login-form");
 
 form.addEventListener('submit', function (e) {
@@ -21,7 +20,9 @@ function login(data) {
             return response.json();
         })
         .then(function (user) {
-
+            let userID = user.userID;
+            // alert("zalogowany user o ID nr: " + userID);
+            localStorage.setItem("loggedUserID", userID);
             switch (user.roleID) {
                 case 3:
                     window.location.href = "CreepPages/creepStartingPage.html";
