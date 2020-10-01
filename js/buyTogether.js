@@ -39,7 +39,7 @@ function soloArtifactTile() {
             let button = document.createElement("button");
             button.classList.add("assignmentButton");
             button.type = "button";
-            button.innerText = "Accept assignment";
+            button.innerText = "Donate To Artifact";
 
             let notAvailable = document.createElement("p");
             notAvailable.innerHTML = "Not Available";
