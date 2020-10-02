@@ -5,6 +5,8 @@
     <title>CodecoolerActiveQuests</title>
     <link rel="stylesheet" type="text/css" href="../../css/styles.css">
     <link rel="stylesheet" type="text/css" href="../../css/colors.css">
+    <script src="../../js/codecoolerQuestManager.js" defer></script>
+    <script src="../../js/whoAmI.js" defer></script>
 </head>
 <body>
 
@@ -12,8 +14,10 @@
     <div class="loggedAs">
         <div class="loggedCentered">
             <p>You Are Currently Logged As:</p>
+            <p id="output"></p>
             <img style="border-radius: 50%" src="../../images/student.jpg" alt="studentImage" width="60" height="60">
             <p>CodeCooler</p>
+            <p id="output2"></p>
             <p style="clear: both"></p>
         </div>
     </div>
@@ -46,16 +50,26 @@
     </div>
 </div>
 
-<!--<div class="menuBackground">-->
-<!--    <div class="content">-->
-<!--        <h2 style="text-align: center"> Your Quests</h2>-->
-<!--        <form id="activeQuests-form" class="formContainer">-->
-<!--            <div class="innerContent">-->
-<!--                <label for="questName">Quest Name:</label>-->
-<!--            </div>-->
-<!--        </form>-->
-<!--    </div>-->
-<!--</div>-->
+<div class="menuBackground">
+    <div class="content">
+        <h2 style="text-align: center"> Your Quests</h2>
+        <form id="activeQuests-form" class="formContainer">
+            <div class="innerContent">
+                <label for="questName">Quest Name:</label>
+            </div>
+            <div class="innerContent">
+                <label for="questReward">Quest Reward:</label>
+            </div>
+            <div class="innerContent">
+                <label for="questDescription">Quest Description:</label>
+            </div>
+            <div class="innerContent">
+                <label for="questStatus">Quest Status:</label>
+            </div>
+            <button class="button" id="sub">Submit Quest</button>
+        </form>
+    </div>
+</div>
 
 </body>
 </html>

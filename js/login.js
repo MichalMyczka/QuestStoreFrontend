@@ -21,8 +21,12 @@ function login(data) {
         })
         .then(function (user) {
             let userID = user.userID;
-            // alert("zalogowany user o ID nr: " + userID);aaaa
+            let userName = user.userName;
+            let userSurname = user.userSurname;
+
             localStorage.setItem("loggedUserID", userID);
+            localStorage.setItem("loggedUserName", userName);
+            localStorage.setItem("loggedUserSurname", userSurname);
             switch (user.roleID) {
                 case 3:
                     window.location.href = "CreepPages/creepStartingPage.html";
